@@ -1,4 +1,4 @@
-export const recipes = [{
+const recipes = [{
         "title": "Thai Curry",
         "ingredients": ["100g Rice", "400ml Coconut Milk", "Your favourite vegetables", "30g Cashews", "1Tbsp. Curry Paste"],
         "steps": ["1. Cook Rice", "2. Chop vegetables", "3. Put vegetable in pan", "4. Add Coconut Milk and Seasoning"],
@@ -12,3 +12,12 @@ export const recipes = [{
         "category": "dessert",
         "date": "29.06.2034"
 }]
+
+export default function Recipes ({}) {
+    console.log("this is a test for Recipe Function");
+    return(
+    <div>
+        <h3>{recipes[0].category}</h3>
+    </div>
+    ); 
+}
