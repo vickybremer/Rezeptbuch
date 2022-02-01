@@ -1,4 +1,4 @@
-let recipes = [{
+export const recipes = [{
         "title": "Thai Curry",
         "ingredients": ["100g Rice", "400ml Coconut Milk", "Your favourite vegetables", "30g Cashews", "1Tbsp. Curry Paste"],
         "steps": ["1. Cook Rice", "2. Chop vegetables", "3. Put vegetable in pan", "4. Add Coconut Milk and Seasoning"],
