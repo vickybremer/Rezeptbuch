@@ -10,7 +10,7 @@ export default function Recipes() {
     //zeigt den State, ob Rezept gezeigt wird
     // const [showFullRecipe, setShowFullRecipe] = useState(false)
 
-    //welches angezeigt wird
+    //zeigt, welches Rezept angezeigt wird
     const [selectedRecipe, setSelectedRecipe] = useState(null)
 
     // const toggleFullRecipe = () => {
