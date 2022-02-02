@@ -2,7 +2,7 @@ import styles from './fullRecipe.module.css';
 //import recipeData from "../recipes/Recipe-data.json"
 
 export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
-    //die Rezepte werden nach dem Title gefiltert (.filter = Array)
+    //die Rezepte werden nach dem Titel gefiltert (.filter = Array)
     const recipe = listData.filter((item) => item.title === selectedRecipe)
 
     return (
