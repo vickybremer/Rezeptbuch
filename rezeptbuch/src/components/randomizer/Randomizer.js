@@ -1,6 +1,11 @@
+import Header from '../header/Header.js'
+
 
 export default function Randomizer (){
     return(
-        <h3> randomizer site </h3>
+        <>
+            <Header title="Randomizer" />
+            <h3> randomizer site </h3>
+        </>
     );
 }

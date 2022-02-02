@@ -1,7 +1,7 @@
 import FullRecipe from "../fullRecipe/fullRecipe.js"
 import { useState } from "react";
 import recipeData from "./Recipe-data.json"
-
+import Header from '../header/Header.js'
 
 
 export default function Recipes() {
@@ -22,6 +22,7 @@ export default function Recipes() {
     //Liste wird aufgerufen
     return (
         <div>
+            <Header title="My Recipes" />
             <h3>{recipeList}</h3>
             {selectedRecipe && <FullRecipe listData={recipeData} selectedRecipe={selectedRecipe} closeHandler={() => setSelectedRecipe(null)} />}
         </div>
