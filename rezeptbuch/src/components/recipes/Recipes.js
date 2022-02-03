@@ -1,6 +1,6 @@
 import FullRecipe from "../fullRecipe/fullRecipe.js"
 import { useState } from "react";
-import recipeData from "./Recipe-data.json"
+import recipeData from "../recipeData/Recipe-data.json"
 import Header from '../header/Header.js'
 
 
