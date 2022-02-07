@@ -6,6 +6,7 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
   const recipe = listData.filter(item => item.title === selectedRecipe);
 
   //jedes div muss bei map ein key bekommen
+  //evtl. automatisch schon 1., 2., 3. vorher hinzufügen (bei steps)
   return (
     <div className={styles.container}>
       <div className={styles.infoBox}>

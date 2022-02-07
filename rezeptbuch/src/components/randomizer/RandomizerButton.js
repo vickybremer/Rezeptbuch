@@ -3,6 +3,8 @@ import { useState } from "react";
 
 export default function RandomizerButton() {
   //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht
+  //evtl. mit Conditional Rendering prüfen, dass die gleichen Rezepte nicht hintereinander
+  //geshufflet werden können.
   const [currentRecipe, setCurrentRecipe] = useState("");
 
   //useEffect
