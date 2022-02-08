@@ -9,11 +9,3 @@ export default function Randomizer() {
     </>
   );
 }
-
-/* 
-
-F R A G E N:
-- Konsole und Canvas sind nicht immer gleich
-- Wieso shuffelt Text auf Website nicht mit, aber Konsole schon??
-
-*/

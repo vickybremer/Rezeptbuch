@@ -1,9 +1,9 @@
-rezeptbuch/node_modules/.cache/.eslintcache
-
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
+
+rezeptbuch/node_modules/.cache/.eslintcache
 
 # testing
 /coverage
