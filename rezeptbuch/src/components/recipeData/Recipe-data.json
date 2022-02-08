@@ -1,6 +1,6 @@
 [
     {
-        "id": 0,
+        "id": "0",
         "title": "Thai Curry",
         "ingredients": [
             "100g Rice",
@@ -19,7 +19,7 @@
         "date": "12.03.2022"
     },
     {
-        "id": 1,
+        "id": "1",
         "title": "Mango Pineapple Sorbet",
         "ingredients": [
             "365g Pineapple diced",
@@ -36,7 +36,7 @@
         "date": "29.06.2034"
     },
     {
-        "id": 2,
+        "id": "2",
         "title": "Tzatziki",
         "ingredients": [
             "400g plain yogurt",
