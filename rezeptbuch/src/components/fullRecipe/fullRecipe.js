@@ -18,7 +18,9 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
         </h5>
         <h5>
           {recipe[0].steps.map(item => (
-            <div key={item}> {item} </div>
+            <li>
+              <div key={item}> {item} </div>
+            </li>
           ))}
         </h5>
         <h5>{"created on: " + recipe[0].date}</h5>
