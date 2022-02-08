@@ -1,0 +1,2 @@
+1. Warum funktioniert gitignore nicht??
+2. fullRecipe.js: Key = item? Reicht das? Auf ID kann man mit item nicht zugreifen
