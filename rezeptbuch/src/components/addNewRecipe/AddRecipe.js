@@ -1,5 +1,4 @@
 import Header from "../header/Header.js";
-// import Dexie from "dexie";
 import useLocalStorage from "react-use-localstorage";
 import React, { useState, useEffect } from "react";
 
@@ -11,6 +10,7 @@ export default function AddRecipe() {
 
   //Zutaten
   const [ingredients, setIngredients] = useState([]);
+  const [currentIngredient, setCurrentIngredient] = useState("");
 
   //Schritte
   const [addSteps, setAddSteps] = useState([]);
@@ -46,6 +46,20 @@ export default function AddRecipe() {
 
     //... = kurz für map Funktion
     setNewRecipes([...newRecipes, newRecipe]);
+    //Daten werden gewiped
+    setAddTitle("");
+    setIngredients("");
+  };
+
+  const AddIngredient = event => {
+    event.preventDefault();
+
+    const newIngredient = currentIngredient;
+
+    //... = kurz für map Funktion
+    //alle Ingredients mappen, die schon drin sind
+    setIngredients([...ingredients, newIngredient]);
+    setCurrentIngredient("");
   };
 
   return (
@@ -62,10 +76,12 @@ export default function AddRecipe() {
           <br />
           <label>Ingredients</label>
           <textarea
-            onChange={event => setIngredients(event.target.value)}
-            value={ingredients}
+            onChange={event => setCurrentIngredient(event.target.value)}
+            value={currentIngredient}
           ></textarea>
-          <button>+</button>
+          <button onClick={AddIngredient}>+</button>
+          {/* mappen  */}
+          <span>{ingredients}</span>
           <br />
           <br />
           <label>Steps</label>

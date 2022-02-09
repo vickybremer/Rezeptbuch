@@ -6,6 +6,8 @@ import Header from "../header/Header.js";
 export default function Recipes() {
   console.log("This is a test for Recipe Function");
 
+  // const localdata=localStorage.getItem(recipes);
+
   //zeigt, welches Rezept angezeigt wird/werden soll
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
