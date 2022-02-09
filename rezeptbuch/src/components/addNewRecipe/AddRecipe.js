@@ -74,10 +74,10 @@ export default function AddRecipe() {
     };
 
     //Zutat löschen
-    const DeleteIngredient = (id) => {
-        const filteredIngredients = [...newRecipes].filter((addIngredients) => addIngredients.id !== id);
-        setAddIngredients(filteredIngredients);
-    }
+    // const DeleteIngredient = (id) => {
+    //     const filteredIngredients = [...newRecipes].filter((addIngredients) => addIngredients.id !== id);
+    //     setAddIngredients(filteredIngredients);
+    // }
 
     //Neuer Schritt
     const AddStep = event => {
@@ -92,10 +92,10 @@ export default function AddRecipe() {
     };
 
     //Schritt löschen
-    const DeleteStep = (id) => {
-        const filteredSteps = [...newRecipes].filter((addSteps) => addSteps.id !== id);
-        setAddSteps(filteredSteps);
-    }
+    // const DeleteStep = (id) => {
+    //     const filteredSteps = [...newRecipes].filter((addSteps) => addSteps.id !== id);
+    //     setAddSteps(filteredSteps);
+    // }
 
     return (
         <>
@@ -111,13 +111,12 @@ export default function AddRecipe() {
                     <br />
 
                     <h3>Ingredients</h3>
-                    <div>{addIngredients.map((item) => (
-                        <>
-                            <div key={item}>{item}
-                                <button onClick={() => DeleteIngredient(addIngredients.id)}>delete</button>
-                            </div>
-                        </>
-                    ))}</div>
+                    {/* <h5>{addIngredients.map(item => (
+                        <div key={item}>{item}
+                            <button onClick={() => DeleteIngredient(addIngredients.id)}>delete</button>
+                        </div>
+                    ))}</h5> */}
+                    <h5>{addIngredients}</h5>
                     <textarea
                         onChange={event => setCurrentIngredient(event.target.value)}
                         value={currentIngredient}
@@ -127,13 +126,12 @@ export default function AddRecipe() {
                     <br />
 
                     <h3>Steps</h3>
-                    <div>{addSteps.map((item) => (
-                        <>
-                            <div key={item}>{item}
-                                <button onClick={() => DeleteStep(addSteps.id)}>delete</button>
-                            </div>
-                        </>
-                    ))}</div>
+                    {/* <h5>{addSteps.map(item => (
+                        <div key={item}>{item}
+                             <button onClick={() => DeleteStep(addSteps.id)}>delete</button> 
+                        </div>
+                    ))}</h5> */}
+                    <h5>{addSteps}</h5>
                     <textarea
                         onChange={event => setCurrentStep(event.target.value)}
                         value={currentStep}
@@ -154,6 +152,6 @@ export default function AddRecipe() {
             </div>
         </>
     );
-};
+}
 
 

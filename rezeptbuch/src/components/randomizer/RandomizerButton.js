@@ -1,8 +1,11 @@
-import recipeData from "../recipeData/Recipe-data.json";
+// import recipeData from "../recipeData/Recipe-data.json";
 import { useState } from "react";
 import FullRecipe from "../fullRecipe/fullRecipe.js";
+import useLocalStorage from "react-use-localstorage";
 
 export default function RandomizerButton() {
+  const localData = JSON.parse(localStorage.getItem("recipes"));
+
   //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht
   //evtl. mit Conditional Rendering prüfen, dass die gleichen Rezepte nicht hintereinander
   //geshufflet werden können.
@@ -11,8 +14,8 @@ export default function RandomizerButton() {
   //useEffect können wir nutzen, falls wir anfangs schon ein Rezept anzeigen möchten
 
   function Randomize() {
-    const random = Math.floor(Math.random() * recipeData.length);
-    const RandomRecipe = recipeData[random].title;
+    const random = Math.floor(Math.random() * localData.length);
+    const RandomRecipe = localData[random].title;
 
     console.log(RandomRecipe);
 
@@ -23,7 +26,7 @@ export default function RandomizerButton() {
     <div>
       {currentRecipe && (
         <FullRecipe
-          listData={recipeData}
+          listData={localData}
           selectedRecipe={currentRecipe}
           closeHandler={() => setCurrentRecipe(null)}
         />
