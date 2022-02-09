@@ -1,6 +1,6 @@
 import Header from "../header/Header.js";
 import useLocalStorage from "react-use-localstorage";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./AddRecipe.module.css";
 
 
