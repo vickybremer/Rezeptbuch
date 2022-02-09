@@ -116,10 +116,10 @@ export default function AddRecipe() {
                             {/* <button onClick={() => DeleteIngredient(addIngredients.id)}>delete</button> */}
                         </div>
                     ))}</h5>
-                    <textarea
+                    <input
                         onChange={event => setCurrentIngredient(event.target.value)}
                         value={currentIngredient}
-                    ></textarea>
+                    ></input>
                     <button onClick={AddIngredient}>+</button>
                     <br />
                     <br />
@@ -130,10 +130,10 @@ export default function AddRecipe() {
                             {/* <button onClick={() => DeleteStep(addSteps.id)}>delete</button>  */}
                         </div>
                     ))}</h5>
-                    <textarea
+                    <input
                         onChange={event => setCurrentStep(event.target.value)}
                         value={currentStep}
-                    ></textarea>
+                    ></input>
                     <button onClick={AddStep}>+</button>
                     <br />
                     <br />
