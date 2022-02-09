@@ -1,2 +1,3 @@
 1. Warum funktioniert gitignore nicht??
-2. fullRecipe.js: Key = item? Reicht das? Auf ID kann man mit item nicht zugreifen
+2. fullRecipe.js + AddRecipe.js: Key = item? Reicht das? Auf ID kann man mit item nicht zugreifen
+3. addRecipe.js : Warum löscht das alle (- wie löschen wir nur eine bestimmte Stelle im Ingredients Array?)
