@@ -1,10 +1,5 @@
-import Header from '../header/Header.js'
+import Header from "../header/Header.js";
+import Dexie from "dexie";
+import React, { useState, useEffect } from "react";
 
-export default function AddRecipe() {
-    return (
-        <>
-            <Header title="Add new Recipe" />
-            <h3>add your new favourite recipe :)</h3>
-        </>
-    );
-}
+export default function AddRecipe() {}
