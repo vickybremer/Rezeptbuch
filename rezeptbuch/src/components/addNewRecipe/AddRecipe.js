@@ -3,12 +3,15 @@ import useLocalStorage from "react-use-localstorage";
 import { useState, useEffect } from "react";
 import "./AddRecipe.module.css";
 
-//Push Test Kommentar
 export default function AddRecipe() {
   const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
 
   //Titel
   const [addTitle, setAddTitle] = useState("");
+  //Titel muss ausgefüllt sein, um Submit-Button zu aktivieren
+  const handleTitleChange = event => {
+    setAddTitle(event.target.value);
+  };
 
   //Zutaten
   const [addIngredients, setAddIngredients] = useState([]);
@@ -20,6 +23,10 @@ export default function AddRecipe() {
 
   //Datum
   const [addDate, setAddDate] = useState("");
+  //Datum: muss ausgefüllt sein, um Submit-Button zu aktivieren
+  const handleDateChange = event => {
+    setAddDate(event.target.value);
+  };
 
   //Liste mit allen neuen Rezepten
   const [newRecipes, setNewRecipes] = useState([]);
@@ -102,14 +109,21 @@ export default function AddRecipe() {
     setAddSteps(filteredSteps);
   };
 
+  //Submit-Button erst klickbar, wenn Titel & Datum Feld ausgefüllt ist
+  const handleSubmit = event => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <Header title="Add new Recipe" />
       <div>
-        <form onSubmit={AddRecipe}>
+        <form onSubmit={(AddRecipe, handleSubmit)}>
           <h3>Title</h3>
           <input
-            onChange={event => setAddTitle(event.target.value)}
+            onChange={
+              (handleTitleChange, event => setAddTitle(event.target.value))
+            }
             value={addTitle}
           ></input>
           <br />
@@ -153,12 +167,18 @@ export default function AddRecipe() {
 
           <h3>Date</h3>
           <input
-            onChange={event => setAddDate(event.target.value)}
+            type="date"
+            onChange={
+              (handleDateChange, event => setAddDate(event.target.value))
+            }
             value={addDate}
           ></input>
           <br />
           <br />
-          <button type="submit"> submit recipe </button>
+          <button type="submit" disabled={!addDate || !addTitle}>
+            {" "}
+            submit recipe{" "}
+          </button>
         </form>
       </div>
     </>
