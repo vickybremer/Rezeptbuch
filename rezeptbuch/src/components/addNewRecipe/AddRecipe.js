@@ -56,8 +56,8 @@ export default function AddRecipe() {
 
         //Daten werden gewiped
         setAddTitle("");
-        setAddIngredients("");
-        setAddSteps("");
+        setAddIngredients([]);
+        setAddSteps([]);
         setAddDate("");
     };
 
