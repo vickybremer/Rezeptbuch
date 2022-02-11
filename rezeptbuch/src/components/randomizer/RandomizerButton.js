@@ -6,10 +6,13 @@ import useLocalStorage from "react-use-localstorage";
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
 
+  let handleRandomize;
   if (localData === null) {
     localData = [];
+    handleRandomize = <p>no recipes yet.</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
+    handleRandomize = <button onClick={Randomize}> shuffle </button>;
   }
 
   //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht
@@ -37,7 +40,7 @@ export default function RandomizerButton() {
           closeHandler={() => setCurrentRecipe(null)}
         />
       )}
-      <button onClick={Randomize}> shuffle </button>
+      <h3>{handleRandomize}</h3>
     </div>
   );
 }
