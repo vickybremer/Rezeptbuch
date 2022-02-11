@@ -5,6 +5,7 @@ import useLocalStorage from "react-use-localstorage";
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
 
+  //Prüft, ob bereits Rezepte eingetragen wurden
   let handleRandomize;
   if (localData === null) {
     localData = [];
@@ -18,8 +19,6 @@ export default function RandomizerButton() {
   //evtl. mit Conditional Rendering prüfen, dass die gleichen Rezepte nicht hintereinander
   //geshufflet werden können.
   const [currentRecipe, setCurrentRecipe] = useState(null);
-
-  //useEffect können wir nutzen, falls wir anfangs schon ein Rezept anzeigen möchten
 
   function Randomize() {
     const random = Math.floor(Math.random() * localData.length);
