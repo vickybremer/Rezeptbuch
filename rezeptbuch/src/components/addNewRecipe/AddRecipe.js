@@ -45,7 +45,7 @@ export default function AddRecipe() {
     event.preventDefault();
     //Das neue Rezept, was hinzugefügt wird
     const newRecipe = {
-      //   id: addId,
+      id: addTitle,
       title: addTitle,
       ingredients: addIngredients,
       steps: addSteps,
@@ -88,7 +88,6 @@ export default function AddRecipe() {
   //Neuer Schritt
   const AddStep = event => {
     event.preventDefault();
-
     const newStep = { id: currentStep };
 
     //... = kurz für map Funktion
