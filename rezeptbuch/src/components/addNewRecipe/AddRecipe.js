@@ -5,157 +5,163 @@ import "./AddRecipe.module.css";
 
 //Push Test Kommentar
 export default function AddRecipe() {
-    const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
+  const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
 
-    //Titel
-    const [addTitle, setAddTitle] = useState("");
+  //Titel
+  const [addTitle, setAddTitle] = useState("");
 
-    //Zutaten
-    const [addIngredients, setAddIngredients] = useState([]);
-    const [currentIngredient, setCurrentIngredient] = useState("");
+  //Zutaten
+  const [addIngredients, setAddIngredients] = useState([]);
+  const [currentIngredient, setCurrentIngredient] = useState("");
 
-    //Schritte
-    const [addSteps, setAddSteps] = useState([]);
-    const [currentStep, setCurrentStep] = useState("");
+  //Schritte
+  const [addSteps, setAddSteps] = useState([]);
+  const [currentStep, setCurrentStep] = useState("");
 
-    //Datum
-    const [addDate, setAddDate] = useState("");
+  //Datum
+  const [addDate, setAddDate] = useState("");
 
-    //Liste mit allen neuen Rezepten
-    const [newRecipes, setNewRecipes] = useState([]);
+  //Liste mit allen neuen Rezepten
+  const [newRecipes, setNewRecipes] = useState([]);
 
-
-    //Alle gespeicherten Rezepte bei Reload noch da
-    useEffect(() => {
-        if (localRecipe.length > 0) {
-            const savedRecipes = JSON.parse(localRecipe);
-            if (savedRecipes) {
-                setNewRecipes(savedRecipes);
-            }
-        }
-
-    }, []);
-
-    //Wird nur ausgeführt wenn neues Rezept dazu kommt
-    useEffect(() => {
-        const json = JSON.stringify(newRecipes);
-        setLocalRecipe(json);
-    }, [newRecipes]);
-
-    //Neues Rezept
-    const AddRecipe = event => {
-        event.preventDefault();
-        //Das neue Rezept, was hinzugefügt wird
-        const newRecipe = {
-            //   id: addId,
-            title: addTitle,
-            ingredients: addIngredients,
-            steps: addSteps,
-            date: addDate
-        };
-
-        //... = kurz für map Funktion
-        setNewRecipes([...newRecipes, newRecipe]);
-
-        //Daten werden gewiped
-        setAddTitle("");
-        setAddIngredients([]);
-        setAddSteps([]);
-        setAddDate("");
-    };
-
-    //Neue Zutat
-    const AddIngredient = event => {
-        event.preventDefault();
-
-        const newIngredient = { id: currentIngredient };
-
-        //... = kurz für map Funktion
-        //alle Ingredients mappen, die schon drin sind
-        setAddIngredients([...addIngredients, newIngredient]);
-        setCurrentIngredient("");
-    };
-
-    //Zutat löschen
-    const DeleteIngredient = (id) => {
-        const filteredIngredients = addIngredients.filter((ingredient) => ingredient.id !== id);
-        setAddIngredients(filteredIngredients);
-        console.log(id);
-        console.log(filteredIngredients);
-        console.log(addIngredients);
+  //Alle gespeicherten Rezepte bei Reload noch da
+  useEffect(() => {
+    if (localRecipe.length > 0) {
+      const savedRecipes = JSON.parse(localRecipe);
+      if (savedRecipes) {
+        setNewRecipes(savedRecipes);
+      }
     }
+  }, []);
 
-    //Neuer Schritt
-    const AddStep = event => {
-        event.preventDefault();
+  //Wird nur ausgeführt wenn neues Rezept dazu kommt
+  useEffect(() => {
+    const json = JSON.stringify(newRecipes);
+    setLocalRecipe(json);
+  }, [newRecipes]);
 
-        const newStep = currentStep;
-
-        //... = kurz für map Funktion
-        //alle Ingredients mappen, die schon drin sind
-        setAddSteps([...addSteps, newStep]);
-        setCurrentStep("");
+  //Neues Rezept
+  const AddRecipe = event => {
+    event.preventDefault();
+    //Das neue Rezept, was hinzugefügt wird
+    const newRecipe = {
+      //   id: addId,
+      title: addTitle,
+      ingredients: addIngredients,
+      steps: addSteps,
+      date: addDate
     };
 
-    //Schritt löschen
-    // const DeleteStep = (id) => {
-    //     const filteredSteps = [...newRecipes].filter((addSteps) => addSteps.id !== id);
-    //     setAddSteps(filteredSteps);
-    // }
+    //... = kurz für map Funktion
+    setNewRecipes([...newRecipes, newRecipe]);
 
-    return (
-        <>
-            <Header title="Add new Recipe" />
-            <div>
-                <form onSubmit={AddRecipe}>
-                    <h3>Title</h3>
-                    <input
-                        onChange={event => setAddTitle(event.target.value)}
-                        value={addTitle}
-                    ></input>
-                    <br />
-                    <br />
+    //Daten werden gewiped
+    setAddTitle("");
+    setAddIngredients([]);
+    setAddSteps([]);
+    setAddDate("");
+  };
 
-                    <h3>Ingredients</h3>
-                    <h5>{addIngredients.map(item => (
-                        <div key={item.id}>{item.id}
-                            <button onClick={() => DeleteIngredient(item.id)}>delete</button>
-                        </div>
-                    ))}</h5>
-                    <input
-                        onChange={event => setCurrentIngredient(event.target.value)}
-                        value={currentIngredient}
-                    ></input>
-                    <button onClick={AddIngredient}>+</button>
-                    <br />
-                    <br />
+  //Neue Zutat
+  const AddIngredient = event => {
+    event.preventDefault();
 
-                    <h3>Steps</h3>
-                    <h5>{addSteps.map(item => (
-                        <div key={item}>{item}
-                            {/* <button onClick={() => DeleteStep(addSteps.id)}>delete</button>  */}
-                        </div>
-                    ))}</h5>
-                    <input
-                        onChange={event => setCurrentStep(event.target.value)}
-                        value={currentStep}
-                    ></input>
-                    <button onClick={AddStep}>+</button>
-                    <br />
-                    <br />
+    const newIngredient = { id: currentIngredient };
 
-                    <h3>Date</h3>
-                    <input
-                        onChange={event => setAddDate(event.target.value)}
-                        value={addDate}
-                    ></input>
-                    <br />
-                    <br />
-                    <button type="submit"> submit recipe </button>
-                </form>
-            </div>
-        </>
+    //... = kurz für map Funktion
+    //alle Ingredients mappen, die schon drin sind
+    setAddIngredients([...addIngredients, newIngredient]);
+    setCurrentIngredient("");
+  };
+
+  //Zutat löschen
+  const DeleteIngredient = id => {
+    const filteredIngredients = addIngredients.filter(
+      ingredient => ingredient.id !== id
     );
+    setAddIngredients(filteredIngredients);
+    // console.log(id);
+    // console.log(filteredIngredients);
+    // console.log(addIngredients);
+  };
+
+  //Neuer Schritt
+  const AddStep = event => {
+    event.preventDefault();
+
+    const newStep = { id: currentStep };
+
+    //... = kurz für map Funktion
+    //alle Ingredients mappen, die schon drin sind
+    setAddSteps([...addSteps, newStep]);
+    setCurrentStep("");
+  };
+
+  //Schritt löschen
+  const DeleteStep = id => {
+    const filteredSteps = addSteps.filter(step => step.id !== id);
+    setAddSteps(filteredSteps);
+  };
+
+  return (
+    <>
+      <Header title="Add new Recipe" />
+      <div>
+        <form onSubmit={AddRecipe}>
+          <h3>Title</h3>
+          <input
+            onChange={event => setAddTitle(event.target.value)}
+            value={addTitle}
+          ></input>
+          <br />
+          <br />
+
+          <h3>Ingredients</h3>
+          <h5>
+            {addIngredients.map(item => (
+              <div key={item.id}>
+                {item.id}
+                <button onClick={() => DeleteIngredient(item.id)}>
+                  delete
+                </button>
+              </div>
+            ))}
+          </h5>
+          <input
+            onChange={event => setCurrentIngredient(event.target.value)}
+            value={currentIngredient}
+          ></input>
+          <button onClick={AddIngredient}>+</button>
+          <br />
+          <br />
+
+          <h3>Steps</h3>
+          <h5>
+            {addSteps.map(item => (
+              <div key={item.id}>
+                {item.id}
+                <button onClick={() => DeleteStep(item.id)}>delete</button>
+              </div>
+            ))}
+          </h5>
+          <input
+            onChange={event => setCurrentStep(event.target.value)}
+            value={currentStep}
+          ></input>
+          <button onClick={AddStep}>+</button>
+          <br />
+          <br />
+
+          <h3>Date</h3>
+          <input
+            onChange={event => setAddDate(event.target.value)}
+            value={addDate}
+          ></input>
+          <br />
+          <br />
+          <button type="submit"> submit recipe </button>
+        </form>
+      </div>
+    </>
+  );
 }
-
-
