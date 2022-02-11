@@ -27,10 +27,13 @@ export default function AddRecipe() {
 
     //Alle gespeicherten Rezepte bei Reload noch da
     useEffect(() => {
-        const savedRecipes = JSON.parse(localRecipe);
-        if (savedRecipes) {
-            setNewRecipes(savedRecipes);
+        if (localRecipe.length > 0) {
+            const savedRecipes = JSON.parse(localRecipe);
+            if (savedRecipes) {
+                setNewRecipes(savedRecipes);
+            }
         }
+
     }, []);
 
     //Wird nur ausgeführt wenn neues Rezept dazu kommt
@@ -65,7 +68,7 @@ export default function AddRecipe() {
     const AddIngredient = event => {
         event.preventDefault();
 
-        const newIngredient = currentIngredient;
+        const newIngredient = { id: currentIngredient };
 
         //... = kurz für map Funktion
         //alle Ingredients mappen, die schon drin sind
@@ -74,10 +77,13 @@ export default function AddRecipe() {
     };
 
     //Zutat löschen
-    // const DeleteIngredient = (id) => {
-    //     const filteredIngredients = [...newRecipes].filter((addIngredients) => addIngredients.id !== id);
-    //     setAddIngredients(filteredIngredients);
-    // }
+    const DeleteIngredient = (id) => {
+        const filteredIngredients = addIngredients.filter((ingredient) => ingredient.id !== id);
+        setAddIngredients(filteredIngredients);
+        console.log(id);
+        console.log(filteredIngredients);
+        console.log(addIngredients);
+    }
 
     //Neuer Schritt
     const AddStep = event => {
@@ -112,8 +118,8 @@ export default function AddRecipe() {
 
                     <h3>Ingredients</h3>
                     <h5>{addIngredients.map(item => (
-                        <div key={item}>{item}
-                            {/* <button onClick={() => DeleteIngredient(addIngredients.id)}>delete</button> */}
+                        <div key={item.id}>{item.id}
+                            <button onClick={() => DeleteIngredient(item.id)}>delete</button>
                         </div>
                     ))}</h5>
                     <input

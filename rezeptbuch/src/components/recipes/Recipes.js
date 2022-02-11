@@ -8,24 +8,32 @@ export default function Recipes() {
   console.log("This is a test for Recipe Function");
 
   let localData = JSON.parse(localStorage.getItem("recipes"));
-
+  let recipeList;
+  //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null) {
     localData = [];
+    recipeList = <p>empty</p>
+    console.log("works" + recipeList);
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
+    recipeList = localData.map(recipe => (
+      <li key={recipe.id}>
+        <button onClick={() => setSelectedRecipe(recipe.title)}>
+          {recipe.title}
+        </button>
+      </li>
+    ));
+    console.log("works also" + localData);
   }
 
   //zeigt, welches Rezept angezeigt wird/werden soll
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-  //Liste der Rezepttitel wird erstellt (sind Buttons)
-  const recipeList = localData.map(recipe => (
-    <li key={recipe.id}>
-      <button onClick={() => setSelectedRecipe(recipe.title)}>
-        {recipe.title}
-      </button>
-    </li>
-  ));
+
+
+
+
+
   console.log(selectedRecipe);
 
   //Liste wird aufgerufen
