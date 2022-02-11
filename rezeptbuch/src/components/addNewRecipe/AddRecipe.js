@@ -5,7 +5,7 @@ import "./AddRecipe.module.css";
 
 //Push Test Kommentar
 export default function AddRecipe() {
-    const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", {});
+    const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
 
     //Titel
     const [addTitle, setAddTitle] = useState("");

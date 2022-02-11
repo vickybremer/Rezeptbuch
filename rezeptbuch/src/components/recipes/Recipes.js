@@ -7,7 +7,13 @@ import useLocalStorage from "react-use-localstorage";
 export default function Recipes() {
   console.log("This is a test for Recipe Function");
 
-  const localData = JSON.parse(localStorage.getItem("recipes"));
+  let localData = JSON.parse(localStorage.getItem("recipes"));
+
+  if (localData === null) {
+    localData = [];
+  } else {
+    localData = JSON.parse(localStorage.getItem("recipes"));
+  }
 
   //zeigt, welches Rezept angezeigt wird/werden soll
   const [selectedRecipe, setSelectedRecipe] = useState(null);

@@ -4,7 +4,12 @@ import FullRecipe from "../fullRecipe/fullRecipe.js";
 import useLocalStorage from "react-use-localstorage";
 
 export default function RandomizerButton() {
-  const localData = JSON.parse(localStorage.getItem("recipes"));
+  let localData = JSON.parse(localStorage.getItem("recipes"));
+  if (localData === null) {
+    localData = [];
+  } else {
+    localData = JSON.parse(localStorage.getItem("recipes"));
+  }
 
   //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht
   //evtl. mit Conditional Rendering prüfen, dass die gleichen Rezepte nicht hintereinander
@@ -16,6 +21,7 @@ export default function RandomizerButton() {
   function Randomize() {
     const random = Math.floor(Math.random() * localData.length);
     const RandomRecipe = localData[random].title;
+
 
     console.log(RandomRecipe);
 
