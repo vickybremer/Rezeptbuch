@@ -1,4 +1,3 @@
-// import recipeData from "../recipeData/Recipe-data.json";
 import { useState } from "react";
 import FullRecipe from "../fullRecipe/fullRecipe.js";
 import useLocalStorage from "react-use-localstorage";
