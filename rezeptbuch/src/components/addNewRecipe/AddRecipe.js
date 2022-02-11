@@ -52,7 +52,7 @@ export default function AddRecipe() {
     event.preventDefault();
     //Das neue Rezept, was hinzugefügt wird
     const newRecipe = {
-      id: addTitle,
+      //   id: addTitle,
       title: addTitle,
       ingredients: addIngredients,
       steps: addSteps,
@@ -118,9 +118,10 @@ export default function AddRecipe() {
     <>
       <Header title="Add new Recipe" />
       <div>
-        <form onSubmit={(AddRecipe, handleSubmit)}>
+        <form onSubmit={(handleSubmit, AddRecipe)}>
           <h3>Title</h3>
           <input
+            placeholder="add title"
             onChange={
               (handleTitleChange, event => setAddTitle(event.target.value))
             }
@@ -141,6 +142,7 @@ export default function AddRecipe() {
             ))}
           </h5>
           <input
+            placeholder="add ingredients"
             onChange={event => setCurrentIngredient(event.target.value)}
             value={currentIngredient}
           ></input>
@@ -158,6 +160,7 @@ export default function AddRecipe() {
             ))}
           </h5>
           <input
+            placeholder="add steps"
             onChange={event => setCurrentStep(event.target.value)}
             value={currentStep}
           ></input>
@@ -176,8 +179,7 @@ export default function AddRecipe() {
           <br />
           <br />
           <button type="submit" disabled={!addDate || !addTitle}>
-            {" "}
-            submit recipe{" "}
+            submit recipe
           </button>
         </form>
       </div>
