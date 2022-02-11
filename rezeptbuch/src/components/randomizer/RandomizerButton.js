@@ -5,6 +5,7 @@ import useLocalStorage from "react-use-localstorage";
 
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
+
   if (localData === null) {
     localData = [];
   } else {
@@ -21,7 +22,6 @@ export default function RandomizerButton() {
   function Randomize() {
     const random = Math.floor(Math.random() * localData.length);
     const RandomRecipe = localData[random].title;
-
 
     console.log(RandomRecipe);
 

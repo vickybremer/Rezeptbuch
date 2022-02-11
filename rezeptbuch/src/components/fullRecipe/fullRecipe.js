@@ -13,13 +13,13 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
         <h3>{recipe[0].title}</h3>
         <h5>
           {recipe[0].ingredients.map(item => (
-            <div key={item}> {item} </div>
+            <div key={item.id}> {item.id} </div>
           ))}
         </h5>
         <h5>
           {recipe[0].steps.map(item => (
             <li>
-              <div key={item}> {item} </div>
+              <div key={item.id}> {item.id} </div>
             </li>
           ))}
         </h5>

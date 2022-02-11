@@ -9,11 +9,14 @@ export default function Recipes() {
 
   let localData = JSON.parse(localStorage.getItem("recipes"));
   let recipeList;
+
+  //zeigt, welches Rezept angezeigt wird/werden soll
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null) {
     localData = [];
-    recipeList = <p>empty</p>
-    console.log("works" + recipeList);
+    recipeList = <p>empty</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     recipeList = localData.map(recipe => (
@@ -23,18 +26,7 @@ export default function Recipes() {
         </button>
       </li>
     ));
-    console.log("works also" + localData);
   }
-
-  //zeigt, welches Rezept angezeigt wird/werden soll
-  const [selectedRecipe, setSelectedRecipe] = useState(null);
-
-
-
-
-
-
-  console.log(selectedRecipe);
 
   //Liste wird aufgerufen
   return (
