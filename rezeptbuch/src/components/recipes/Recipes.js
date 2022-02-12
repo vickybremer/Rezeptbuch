@@ -24,7 +24,7 @@ export default function Recipes() {
         <button onClick={() => setSelectedRecipe(recipe.title)}>
           {recipe.title}
         </button>
-        <button onClick={() => DeleteRecipe(recipe.id)}>delete</button>
+        <button onClick={() => DeleteRecipe(recipe.id)}>x</button>
       </li>
     ));
   }

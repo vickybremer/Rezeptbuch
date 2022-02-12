@@ -1,6 +1,9 @@
-.header {
-    text-align: center;
-    color: rgb(0, 0, 0);
-    font-size: 35px;
-    margin-top: 30px;
+#header {
+  text-align: center;
+  margin-top: 60px;
+  font-family: konnect;
+  color: rgb(56, 56, 56);
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: lowercase;
 }

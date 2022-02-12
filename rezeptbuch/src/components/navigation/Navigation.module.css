@@ -1,0 +1,58 @@
+.navButtons {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.navButtons .nav1 {
+  flex: 0 0 50%;
+  background-color: rgb(130, 130, 211);
+  font-family: konnect;
+  font-size: 15px;
+  text-transform: lowercase;
+  color: white;
+  border: none;
+}
+
+.navButtons .nav2 {
+  flex: 0 0 50%;
+  background-color: rgb(211, 130, 174);
+  font-family: konnect;
+  font-size: 15px;
+  text-transform: lowercase;
+  color: white;
+  border: none;
+}
+
+.navButtons .nav3 {
+  background-color: rgb(130, 211, 157);
+  font-family: konnect;
+  font-size: 15px;
+  text-transform: lowercase;
+  color: white;
+  margin-left: 80%;
+  border: none;
+  border-radius: 35%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 45px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0px;
+  box-shadow: 0 -1px 12px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 55px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  bottom: 0px;
+  box-shadow: 0 -1px 12px;
+}
