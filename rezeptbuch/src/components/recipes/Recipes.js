@@ -1,7 +1,7 @@
 import FullRecipe from "../fullRecipe/fullRecipe.js";
-import AddRecipe from "../addNewRecipe/AddRecipe.js";
 import { useState } from "react";
 import Header from "../header/Header.js";
+import "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
 
 export default function Recipes() {
