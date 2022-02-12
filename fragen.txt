@@ -1,9 +1,8 @@
+F R A G E N
 1. Warum funktioniert gitignore nicht??
 2. fullRecipe.js + AddRecipe.js: Key = item? Reicht das? Auf ID kann man mit item nicht zugreifen
-
-
-N E U
-3. Wie können wir Buttons farbig darstellen, je nachdem auf welcher Seite man sich befindet?
+3. Wie bekommen wir es hin, dass die empty message nicht verschwindet?
+4. Wie können wir Buttons farbig darstellen, je nachdem auf welcher Seite man sich befindet?
 
 
 I D E E N

@@ -2,3 +2,15 @@
   padding-top: 30%;
   padding-bottom: 85px;
 }
+
+.bla {
+  padding-top: 30%;
+  padding-bottom: 85px;
+
+  text-align: center;
+  font-family: konnect;
+  color: rgb(56, 56, 56);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
