@@ -1,7 +1,7 @@
 import FullRecipe from "../fullRecipe/fullRecipe.js";
 import { useState } from "react";
 import Header from "../header/Header.js";
-import "./Recipes.module.css";
+import styles from "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
 
 export default function Recipes() {
@@ -16,16 +16,18 @@ export default function Recipes() {
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null) {
     localData = [];
-    recipeList = <p>start cooking. ;)</p>;
+    recipeList = <p className={styles.ListTextStyling}>start cooking. ;)</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     recipeList = localData.map(recipe => (
-      <li key={recipe.id}>
-        <button onClick={() => setSelectedRecipe(recipe.title)}>
-          {recipe.title}
-        </button>
-        <button onClick={() => DeleteRecipe(recipe.id)}>x</button>
-      </li>
+      <div key={recipe.id}>
+        <div className={styles.ListItemStyling}>
+          <button onClick={() => setSelectedRecipe(recipe.title)}>
+            {recipe.title}
+          </button>
+        </div>
+        {/* <button onClick={() => DeleteRecipe(recipe.id)}>x</button> */}
+      </div>
     ));
   }
 
@@ -39,16 +41,18 @@ export default function Recipes() {
 
   //Liste wird aufgerufen
   return (
-    <div>
+    <div className={styles.RecipesBody}>
       <Header title="My Recipes" />
-      <h3>{recipeList}</h3>
-      {selectedRecipe && (
-        <FullRecipe
-          listData={localData}
-          selectedRecipe={selectedRecipe}
-          closeHandler={() => setSelectedRecipe(null)}
-        />
-      )}
+      <div>
+        <h3>{recipeList}</h3>
+        {selectedRecipe && (
+          <FullRecipe
+            listData={localData}
+            selectedRecipe={selectedRecipe}
+            closeHandler={() => setSelectedRecipe(null)}
+          />
+        )}
+      </div>
     </div>
   );
 }

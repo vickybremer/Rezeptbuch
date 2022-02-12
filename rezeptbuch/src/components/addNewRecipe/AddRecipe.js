@@ -1,7 +1,7 @@
 import Header from "../header/Header.js";
 import useLocalStorage from "react-use-localstorage";
 import { useState, useEffect } from "react";
-import "./AddRecipe.module.css";
+import styles from "./AddRecipe.module.css";
 
 export default function AddRecipe() {
   const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
@@ -117,7 +117,7 @@ export default function AddRecipe() {
   return (
     <>
       <Header title="Add new Recipe" />
-      <div>
+      <div className={styles.addRBody}>
         <form onSubmit={(handleSubmit, AddRecipe)}>
           <h3>Title</h3>
           <input

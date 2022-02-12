@@ -4,11 +4,11 @@ import styles from "./Navigation.module.css";
 export default function Navigation({ nav }) {
   return (
     <div className={styles.navButtons}>
-      <header>
+      <div className={styles.nav3Container}>
         <button className={styles.nav3} onClick={() => nav("AddRecipe")}>
           +
         </button>
-      </header>
+      </div>
       <footer>
         <button className={styles.nav1} onClick={() => nav("Randomizer")}>
           Randomizer

@@ -1,6 +1,16 @@
-#header {
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0px;
+  height: 80px;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0px;
+  box-shadow: 0 -1px 12px;
+
   text-align: center;
-  margin-top: 60px;
   font-family: konnect;
   color: rgb(56, 56, 56);
   font-size: 25px;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import FullRecipe from "../fullRecipe/fullRecipe.js";
-import "./Randomizer.module.css";
+import styles from "./Randomizer.module.css";
 import useLocalStorage from "react-use-localstorage";
 
 export default function RandomizerButton() {
@@ -31,7 +31,7 @@ export default function RandomizerButton() {
   }
 
   return (
-    <div>
+    <div className={styles.RandomizerBody}>
       {currentRecipe && (
         <FullRecipe
           listData={localData}

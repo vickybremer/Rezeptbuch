@@ -13,6 +13,9 @@
   color: white;
   border: none;
 }
+.navButtons .nav1:hover {
+  background-color: rgb(152, 152, 233);
+}
 
 .navButtons .nav2 {
   flex: 0 0 50%;
@@ -23,27 +26,35 @@
   color: white;
   border: none;
 }
+.navButtons .nav2:hover {
+  background-color: rgb(216, 149, 186);
+}
 
 .navButtons .nav3 {
+  flex: 0 0 12%;
   background-color: rgb(130, 211, 157);
   font-family: konnect;
-  font-size: 15px;
+  font-size: 30px;
+  font-weight: 400;
   text-transform: lowercase;
   color: white;
   margin-left: 80%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   border: none;
-  border-radius: 35%;
+  border-radius: 50%;
+}
+.navButtons .nav3:hover {
+  background-color: rgb(146, 226, 173);
 }
 
-header {
+.nav3Container {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 45px;
-  background-color: rgb(255, 255, 255);
+  height: 80px;
   position: fixed;
   top: 0px;
-  box-shadow: 0 -1px 12px;
 }
 
 footer {
