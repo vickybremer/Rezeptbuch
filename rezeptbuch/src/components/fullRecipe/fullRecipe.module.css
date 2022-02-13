@@ -12,7 +12,7 @@
   color: rgb(56, 56, 56);
   font-size: 13px;
   font-weight: 400;
-  text-transform: lowercase;
+  
 }
 
 li {
@@ -30,6 +30,7 @@ li {
   font-size: 13px;
   font-weight: 400;
   text-transform: lowercase;
+  
 }
 
 .infoBox #stepsStyling {
