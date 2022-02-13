@@ -13,7 +13,12 @@ export default function RandomizerButton() {
     handleRandomize = <p>no recipes yet.</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
-    handleRandomize = <button onClick={Randomize}> shuffle </button>;
+    handleRandomize = (
+      <button className={styles.shuffleButton} onClick={Randomize}>
+        {" "}
+        shuffle{" "}
+      </button>
+    );
   }
 
   //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht

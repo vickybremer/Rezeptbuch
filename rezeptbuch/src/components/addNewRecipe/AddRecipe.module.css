@@ -1,4 +1,186 @@
 .addRBody {
   padding-top: 30%;
   padding-bottom: 85px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Titel Styling */
+.titleStyling {
+  text-align: center;
+}
+.titleStyling h3 {
+  text-align: center;
+  font-family: konnect;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.titleStyling input {
+  background-color: rgb(221, 221, 221);
+  color: rgb(82, 82, 82);
+  font-family: konnect;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Zutaten Styling */
+.inputAndButtonStyling {
+  display: flex;
+  justify-content: center;
+}
+.ingredientStyling h3 {
+  text-align: center;
+  font-family: konnect;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.ingredientStyling h5 {
+  color: gray;
+  text-align: center;
+  font-family: konnect;
+  font-size: 12px;
+  font-weight: 400;
+}
+.ingredientStyling input {
+  background-color: rgb(221, 221, 221);
+  color: rgb(82, 82, 82);
+  font-family: konnect;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.ingredientStyling #buttonAdd {
+  font-family: konnect;
+  font-size: 17px;
+  font-weight: 400;
+
+  text-transform: lowercase;
+  background-color: rgb(136, 136, 136);
+  color: rgb(224, 224, 224);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.ingredientStyling #buttonDelete {
+  font-family: konnect;
+  font-size: 10px;
+  font-weight: 400;
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(85, 84, 84);
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+
+  margin-left: 5px;
+}
+
+/* Schritte Styling */
+.stepsStyling h3 {
+  text-align: center;
+  font-family: konnect;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: lowercase;
+}
+.stepsStyling h5 {
+  color: gray;
+  text-align: center;
+  font-family: konnect;
+  font-size: 12px;
+  font-weight: 400;
+}
+.stepsStyling input {
+  background-color: rgb(221, 221, 221);
+  color: rgb(82, 82, 82);
+  font-family: konnect;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.stepsStyling #buttonAdd {
+  font-family: konnect;
+  font-size: 17px;
+  font-weight: 400;
+
+  text-transform: lowercase;
+  background-color: rgb(136, 136, 136);
+  color: rgb(224, 224, 224);
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.stepsStyling #buttonDelete {
+  font-family: konnect;
+  font-size: 10px;
+  font-weight: 400;
+
+  background-color: rgb(255, 255, 255);
+  color: rgb(85, 84, 84);
+  width: 15px;
+  height: 15px;
+  border-radius: 5px;
+  border: none;
+
+  margin-left: 5px;
+}
+
+/* Datum Styling */
+.dateStyling {
+  text-align: center;
+}
+.dateStyling input {
+  text-align: center;
+  background-color: rgb(221, 221, 221);
+  color: rgb(143, 143, 143);
+  font-family: konnect;
+  text-transform: lowercase;
+
+  font-size: 13px;
+  font-weight: 400;
+
+  width: 80%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* Submit Button Styling */
+.submitButtonStyling {
+  display: flex;
+  justify-content: center;
+}
+.submitButtonStyling button {
+  background-color: rgb(72, 138, 199);
+  color: #ffffff;
+  margin-top: 40px;
+  width: 130px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+.submitButtonStyling button:disabled {
+  background-color: rgb(184, 216, 247);
+  color: rgb(255, 255, 255);
 }

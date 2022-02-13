@@ -1,4 +1,22 @@
 .RandomizerBody {
   padding-top: 30%;
   padding-bottom: 85px;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
+.shuffleButton {
+  background-color: rgb(235, 210, 102);
+  width: 100%;
+  margin-bottom: 20px;
+  height: 35px;
+  border-radius: 5px;
+  border: none;
+
+  text-align: center;
+  font-family: konnect;
+  color: rgb(56, 56, 56);
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: lowercase;
 }

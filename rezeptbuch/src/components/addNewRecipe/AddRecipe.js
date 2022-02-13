@@ -119,68 +119,93 @@ export default function AddRecipe() {
       <Header title="Add new Recipe" />
       <div className={styles.addRBody}>
         <form onSubmit={(handleSubmit, AddRecipe)}>
-          <h3>Title</h3>
-          <input
-            placeholder="add title"
-            onChange={
-              (handleTitleChange, event => setAddTitle(event.target.value))
-            }
-            value={addTitle}
-          ></input>
+          <div className={styles.titleStyling}>
+            <h3>Title</h3>
+            <input
+              placeholder="add title"
+              onChange={
+                (handleTitleChange, event => setAddTitle(event.target.value))
+              }
+              value={addTitle}
+            ></input>
+          </div>
           <br />
           <br />
 
-          <h3>Ingredients</h3>
-          <h5>
-            {addIngredients.map(item => (
-              <div key={item.id}>
-                {item.id}
-                <button onClick={() => DeleteIngredient(item.id)}>
-                  delete
-                </button>
-              </div>
-            ))}
-          </h5>
-          <input
-            placeholder="add ingredients"
-            onChange={event => setCurrentIngredient(event.target.value)}
-            value={currentIngredient}
-          ></input>
-          <button onClick={AddIngredient}>+</button>
+          <div className={styles.ingredientStyling}>
+            <h3>Ingredients</h3>
+            <h5>
+              {addIngredients.map(item => (
+                <div key={item.id}>
+                  {item.id}
+                  <button
+                    id={styles.buttonDelete}
+                    onClick={() => DeleteIngredient(item.id)}
+                  >
+                    X
+                  </button>
+                </div>
+              ))}
+            </h5>
+            <div className={styles.inputAndButtonStyling}>
+              <input
+                placeholder="add ingredients"
+                onChange={event => setCurrentIngredient(event.target.value)}
+                value={currentIngredient}
+              ></input>
+              <button id={styles.buttonAdd} onClick={AddIngredient}>
+                +
+              </button>
+            </div>
+          </div>
           <br />
           <br />
 
-          <h3>Steps</h3>
-          <h5>
-            {addSteps.map(item => (
-              <div key={item.id}>
-                {item.id}
-                <button onClick={() => DeleteStep(item.id)}>delete</button>
-              </div>
-            ))}
-          </h5>
-          <input
-            placeholder="add steps"
-            onChange={event => setCurrentStep(event.target.value)}
-            value={currentStep}
-          ></input>
-          <button onClick={AddStep}>+</button>
-          <br />
-          <br />
-
-          <h3>Date</h3>
-          <input
-            type="date"
-            onChange={
-              (handleDateChange, event => setAddDate(event.target.value))
-            }
-            value={addDate}
-          ></input>
-          <br />
-          <br />
-          <button type="submit" disabled={!addDate || !addTitle}>
-            submit recipe
-          </button>
+          <div className={styles.stepsStyling}>
+            <h3>Steps</h3>
+            <h5>
+              {addSteps.map(item => (
+                <div key={item.id}>
+                  {item.id}
+                  <button
+                    id={styles.buttonDelete}
+                    onClick={() => DeleteStep(item.id)}
+                  >
+                    X
+                  </button>
+                </div>
+              ))}
+            </h5>
+            <div className={styles.inputAndButtonStyling}>
+              <input
+                placeholder="add steps"
+                onChange={event => setCurrentStep(event.target.value)}
+                value={currentStep}
+              ></input>
+              <button id={styles.buttonAdd} onClick={AddStep}>
+                +
+              </button>
+            </div>
+            <br />
+            <br />
+            <div className={styles.dateStyling}>
+              <h3>Date</h3>
+              <input
+                type="date"
+                onChange={
+                  (handleDateChange, event => setAddDate(event.target.value))
+                }
+                value={addDate}
+              ></input>
+              <br />
+              <br />
+            </div>
+            <div className={styles.submitButtonStyling}>
+              <button type="submit" disabled={!addDate || !addTitle}>
+                submit recipe
+              </button>
+            </div>
+          </div>
         </form>
       </div>
     </>
