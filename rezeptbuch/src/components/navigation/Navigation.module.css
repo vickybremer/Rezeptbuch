@@ -17,6 +17,10 @@
   background-color: rgb(152, 152, 233);
 }
 
+.navButtons .nav1:focus{
+  background-color: brown;
+}
+
 .navButtons .nav2 {
   flex: 0 0 50%;
   background-color: rgb(211, 130, 174);
@@ -28,6 +32,10 @@
 }
 .navButtons .nav2:hover {
   background-color: rgb(216, 149, 186);
+}
+
+.navButtons .nav2:focus{
+  background-color: brown;
 }
 
 .navButtons .nav3 {

@@ -8,7 +8,7 @@ export default function RandomizerButton() {
 
   //Prüft, ob bereits Rezepte eingetragen wurden
   let handleRandomize;
-  if (localData === null) {
+  if (localData === null || localData.length === 0) {
     localData = [];
     handleRandomize = <p className={styles.bla} >no recipes yet.</p>;
   } else {
