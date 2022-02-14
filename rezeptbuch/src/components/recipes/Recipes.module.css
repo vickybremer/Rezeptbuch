@@ -1,17 +1,16 @@
 .RecipesBody {
-  padding-top: 30%;
+  padding-top: 33%;
   padding-bottom: 120px;
 }
 
-.ListItemStyling {
+.listItemStyling {
   display: flex;
   justify-content: center;
   flex-direction: column;
   padding-left: 23%;
   padding-right: 23%;
 }
-
-.ListItemStyling button {
+.listItemStyling button {
   background-color: rgb(235, 210, 102);
   width: 100%;
   margin-bottom: 20px;
@@ -24,4 +23,16 @@
   color: rgb(56, 56, 56);
   font-size: 15px;
   font-weight: 400;
+}
+
+.listTextStyling {
+  padding-top: 30%;
+  padding-bottom: 85px;
+
+  text-align: center;
+  font-family: montserrat;
+  color: rgb(56, 56, 56);
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: lowercase;
 }

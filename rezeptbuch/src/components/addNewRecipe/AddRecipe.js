@@ -124,7 +124,7 @@ export default function AddRecipe() {
 
   return (
     <div>
-      <Header title="Add new Recipe" />
+      <Header title="Add Recipe" />
       <div className={styles.addRBody}>
         <form onSubmit={(handleSubmit, AddRecipe)}>
           <div className={styles.titleStyling}>
@@ -144,13 +144,13 @@ export default function AddRecipe() {
             <h3>Ingredients</h3>
             <h5>
               {addIngredients.map(item => (
-                <div key={item.id}>
-                  {item.id}
+                <div className={styles.ingredientsListStyling} key={item.id}>
+                  <div className={styles.singleElement}>{item.id}</div>
                   <button
                     id={styles.buttonDelete}
                     onClick={() => DeleteIngredient(item.id)}
                   >
-                    X
+                    x
                   </button>
                 </div>
               ))}
@@ -173,8 +173,8 @@ export default function AddRecipe() {
             <h3>Steps</h3>
             <h5>
               {addSteps.map(item => (
-                <div key={item.id}>
-                  {item.id}
+                <div className={styles.stepsListStyling} key={item.id}>
+                  <div className={styles.singleElement}>{item.id}</div>
                   <button
                     id={styles.buttonDelete}
                     onClick={() => DeleteStep(item.id)}
@@ -194,10 +194,12 @@ export default function AddRecipe() {
                 +
               </button>
             </div>
-            <br />
-            <br />
+          </div>
+          <br />
+          <br />
 
-            <div>
+          <div className={styles.flexStyling}>
+            <div className={styles.categoryStyling}>
               <h3>category</h3>
               <select
                 onChange={
@@ -225,14 +227,14 @@ export default function AddRecipe() {
               <br />
               <br />
             </div>
-            <div className={styles.submitButtonStyling}>
-              <button
-                type="submit"
-                disabled={!addTitle || !addCategory || !addDate}
-              >
-                submit recipe
-              </button>
-            </div>
+          </div>
+          <div className={styles.submitButtonStyling}>
+            <button
+              type="submit"
+              disabled={!addTitle || !addCategory || !addDate}
+            >
+              add
+            </button>
           </div>
         </form>
       </div>

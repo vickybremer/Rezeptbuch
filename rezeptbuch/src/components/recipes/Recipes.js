@@ -24,13 +24,16 @@ export default function Recipes() {
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null || localData.length === 0) {
     localData = [];
-    recipeList = <p className={styles.ListTextStyling}>start cooking. ;)</p>;
+    recipeList = <p className={styles.listTextStyling}>start cooking. ;)</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     recipeList = localData.map(recipe => (
       <div key={recipe.id}>
-        <div className={styles.ListItemStyling}>
-          <button onClick={() => setSelectedRecipe(recipe.title)}>
+        <div className={styles.listItemStyling}>
+          <button
+            className={styles.recipeButton}
+            onClick={() => setSelectedRecipe(recipe.title)}
+          >
             {/* <img src={icon} width="25px" alt=""></img> */}
             {recipe.title}
           </button>

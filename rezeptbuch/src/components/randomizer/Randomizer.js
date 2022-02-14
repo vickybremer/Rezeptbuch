@@ -5,7 +5,7 @@ import "./Randomizer.module.css";
 export default function Randomizer() {
   return (
     <div>
-      <Header title="Randomizer" />
+      <Header title="We'll choose for you" />
       <RandomizerButton />
     </div>
   );

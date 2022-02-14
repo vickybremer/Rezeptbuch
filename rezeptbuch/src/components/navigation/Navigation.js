@@ -11,7 +11,7 @@ export default function Navigation({ nav }) {
       </div>
       <footer>
         <button className={styles.nav1} onClick={() => nav("Randomizer")}>
-          Randomizer
+          Can't decide?
         </button>
         <button className={styles.nav2} onClick={() => nav("MainSite")}>
           My Recipes

@@ -10,13 +10,12 @@ export default function RandomizerButton() {
   let handleRandomize;
   if (localData === null || localData.length === 0) {
     localData = [];
-    handleRandomize = <p className={styles.bla} >no recipes yet.</p>;
+    handleRandomize = <p className={styles.bla}>no recipes yet.</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     handleRandomize = (
       <button className={styles.shuffleButton} onClick={Randomize}>
-        {" "}
-        shuffle{" "}
+        shuffle
       </button>
     );
   }
