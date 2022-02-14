@@ -20,7 +20,7 @@
   border: none;
 }
 .navButtons .nav1:focus {
-  background-color: rgb(255, 255, 255);
+  background-color: #faf9f8;
   border: 2px solid black;
   color: black;
 }
@@ -41,7 +41,7 @@
   border: none;
 }
 .navButtons .nav2:focus {
-  background-color: rgb(255, 255, 255);
+  background-color: #faf9f8;
   border: 2px solid black;
   color: black;
 }
@@ -57,7 +57,7 @@
 .navButtons .nav3 {
   font-family: oswald;
   background-color: rgba(255, 255, 255, 0);
-  font-size: 40px;
+  font-size: 37px;
   font-weight: 400;
   color: rgb(0, 0, 0);
   border: none;
@@ -68,8 +68,8 @@
 }
 
 .navButtons .nav3:focus {
-  background-color: rgba(255, 255, 255, 0);
-  color: rgba(255, 255, 255, 0);
+  background-color: #faf9f800;
+  color: #faf9f800;
 }
 
 footer {

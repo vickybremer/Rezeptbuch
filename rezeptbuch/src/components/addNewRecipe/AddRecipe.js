@@ -123,7 +123,7 @@ export default function AddRecipe() {
   };
 
   return (
-    <>
+    <div>
       <Header title="Add new Recipe" />
       <div className={styles.addRBody}>
         <form onSubmit={(handleSubmit, AddRecipe)}>
@@ -202,7 +202,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                    event => setAddCategory(event.target.value))
+                  event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >
@@ -236,6 +236,6 @@ export default function AddRecipe() {
           </div>
         </form>
       </div>
-    </>
+    </div>
   );
 }

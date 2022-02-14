@@ -52,7 +52,6 @@ export default function Recipes() {
   return (
     <div className={styles.RecipesBody}>
       <Header title="My Recipes" />
-      <hr />
       <div>
         <h3>{recipeList}</h3>
         {selectedRecipe && (

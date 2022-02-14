@@ -5,7 +5,7 @@ h1 {
   width: 100%;
   margin: 0px;
   height: 85px;
-  background-color: rgb(177, 129, 129);
+  background-color: #faf9f8;
   position: fixed;
   top: 0px;
 
@@ -20,7 +20,7 @@ h1 {
 hr {
   margin-top: -28px;
   border: none;
-  height: 1.1px;
-  background-color: rgb(0, 0, 0);
+  height: 1px;
+  background-color: rgb(105, 105, 105);
   width: 90%;
 }
