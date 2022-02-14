@@ -1,19 +1,26 @@
-header {
+h1 {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   width: 100%;
   margin: 0px;
-  height: 80px;
-  background-color: rgb(255, 255, 255);
+  height: 85px;
+  background-color: rgb(177, 129, 129);
   position: fixed;
   top: 0px;
-  box-shadow: 0 -1px 12px;
 
   text-align: center;
-  font-family: konnect;
-  color: rgb(56, 56, 56);
-  font-size: 25px;
-  font-weight: 400;
-  text-transform: lowercase;
+  font-family: oswald;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+hr {
+  margin-top: -28px;
+  border: none;
+  height: 1.1px;
+  background-color: rgb(0, 0, 0);
+  width: 90%;
 }
