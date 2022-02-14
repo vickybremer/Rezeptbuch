@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from "../header/Header.js";
 import styles from "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
+import { icons } from "../../CategoryIcons.js";
 
 export default function Recipes() {
   console.log("This is a test for Recipe Function");
@@ -12,6 +13,13 @@ export default function Recipes() {
 
   //zeigt, welches Rezept angezeigt wird/werden soll
   const [selectedRecipe, setSelectedRecipe] = useState(null);
+
+  // //Icons werden gewählt
+  const [icon, setIcon] = useState(null);
+  //Kategorie
+  if (localData.category === "food") {
+    setIcon = icons[0].src;
+  }
 
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null) {
@@ -23,6 +31,7 @@ export default function Recipes() {
       <div key={recipe.id}>
         <div className={styles.ListItemStyling}>
           <button onClick={() => setSelectedRecipe(recipe.title)}>
+            <img src={icons[0].src} width="25px"></img>
             {recipe.title}
           </button>
         </div>

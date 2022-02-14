@@ -21,6 +21,12 @@ export default function AddRecipe() {
   const [addSteps, setAddSteps] = useState([]);
   const [currentStep, setCurrentStep] = useState("");
 
+  //Kategorie
+  const [addCategory, setAddCategory] = useState("");
+  const handleCategoryChange = event => {
+    setAddCategory(event.target.value);
+  };
+
   //Datum
   const [addDate, setAddDate] = useState("");
   //Datum: muss ausgefüllt sein, um Submit-Button zu aktivieren
@@ -56,6 +62,7 @@ export default function AddRecipe() {
       title: addTitle,
       ingredients: addIngredients,
       steps: addSteps,
+      category: addCategory,
       date: addDate
     };
 
@@ -67,6 +74,7 @@ export default function AddRecipe() {
     setAddIngredients([]);
     setAddSteps([]);
     setAddDate("");
+    setAddCategory("");
   };
 
   //Neue Zutat
@@ -188,6 +196,23 @@ export default function AddRecipe() {
             </div>
             <br />
             <br />
+
+            <div>
+              <h3>category</h3>
+              <select
+                onChange={
+                  (handleCategoryChange,
+                  event => setAddCategory(event.target.value))
+                }
+                value={addCategory}
+              >
+                <option value="option1">drinks</option>
+                <option value="option2">food</option>
+              </select>
+            </div>
+            <br />
+            <br />
+
             <div className={styles.dateStyling}>
               <h3>Date</h3>
               <input
@@ -201,7 +226,10 @@ export default function AddRecipe() {
               <br />
             </div>
             <div className={styles.submitButtonStyling}>
-              <button type="submit" disabled={!addDate || !addTitle}>
+              <button
+                type="submit"
+                disabled={!addTitle || !addCategory || !addDate}
+              >
                 submit recipe
               </button>
             </div>
