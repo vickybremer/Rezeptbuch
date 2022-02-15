@@ -23,7 +23,7 @@
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   width: 100%;
-  height: 730px;
+  height: 700px;
   margin-top: 28%;
 }
 .fullRecipeTextStyling{
@@ -72,6 +72,6 @@ li {
   
 }
 
-.infoBox #stepsStyling {
+/* .infoBox #stepsStyling {
   margin-left: 10px;
-}
+} */

@@ -174,7 +174,7 @@ export default function AddRecipe() {
             <h5>
               {addSteps.map(item => (
                 <div className={styles.stepsListStyling} key={item.id}>
-                  <div className={styles.singleElement}>{item.id}</div>
+                  <h5 className={styles.singleElement}>{item.id}</h5>
                   <button
                     id={styles.buttonDelete}
                     onClick={() => DeleteStep(item.id)}
@@ -204,7 +204,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                  event => setAddCategory(event.target.value))
+                    event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >
