@@ -204,15 +204,23 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                    event => setAddCategory(event.target.value))
+                  event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >
                 <option disabled selected value="placeholder">
                   pick category
                 </option>
-                <option value="drinks">drinks</option>
-                <option value="food">food</option>
+                <option value="starter">starter</option>
+                <option value="appetizer">appetizer</option>
+                <option value="main">main</option>
+                <option value="dessert">dessert</option>
+                <option value="snack">snack</option>
+                <option value="side dish">side dish</option>
+                <option value="salad">salad</option>
+                <option value="soup">soup</option>
+                <option value="drink">drink</option>
+                <option value="baked good">baked good</option>
               </select>
             </div>
             <br />

@@ -15,17 +15,41 @@ export default function Recipes() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   //Icons werden gewählt (pro Kategorie)
-
   function getIcon(recipeID) {
     let iconSource;
-    if (localData[recipeID].category === "drinks") {
-
+    if (localData[recipeID].category === "starter") {
       iconSource = icons[0].src;
-      console.log("hat funktioniert");
     }
-    console.log(iconSource);
-    return iconSource
+    if (localData[recipeID].category === "appetizer") {
+      iconSource = icons[1].src;
+    }
+    if (localData[recipeID].category === "main") {
+      iconSource = icons[0].src;
+    }
+    if (localData[recipeID].category === "dessert") {
+      iconSource = icons[1].src;
+    }
+    if (localData[recipeID].category === "snack") {
+      iconSource = icons[0].src;
+    }
+    if (localData[recipeID].category === "side dish") {
+      iconSource = icons[1].src;
+    }
+    if (localData[recipeID].category === "salad") {
+      iconSource = icons[0].src;
+    }
+    if (localData[recipeID].category === "soup") {
+      iconSource = icons[1].src;
+    }
+    if (localData[recipeID].category === "drink") {
+      iconSource = icons[0].src;
+    }
+    if (localData[recipeID].category === "baked good") {
+      iconSource = icons[1].src;
+    }
 
+    console.log(iconSource);
+    return iconSource;
   }
 
   //Liste der Rezepttitel wird erstellt (sind Buttons)
