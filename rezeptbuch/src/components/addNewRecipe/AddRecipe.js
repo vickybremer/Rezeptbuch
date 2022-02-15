@@ -22,7 +22,7 @@ export default function AddRecipe() {
   const [currentStep, setCurrentStep] = useState("");
 
   //Kategorie
-  const [addCategory, setAddCategory] = useState("");
+  const [addCategory, setAddCategory] = useState("placeholder");
   const handleCategoryChange = event => {
     setAddCategory(event.target.value);
   };
@@ -74,7 +74,7 @@ export default function AddRecipe() {
     setAddIngredients([]);
     setAddSteps([]);
     setAddDate("");
-    setAddCategory("");
+    setAddCategory("placeholder");
   };
 
   //Neue Zutat
@@ -208,6 +208,9 @@ export default function AddRecipe() {
                 }
                 value={addCategory}
               >
+                <option disabled selected value="placeholder">
+                  pick category
+                </option>
                 <option value="drinks">drinks</option>
                 <option value="food">food</option>
               </select>
