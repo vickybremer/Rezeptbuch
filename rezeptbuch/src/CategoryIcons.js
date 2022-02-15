@@ -1,4 +1,4 @@
 export const icons = [
-  { id: "0", src: "./assets/example1.jpeg" },
-  { id: "1", src: "./assets/example2.jpeg" }
+  { category: "food", src: "./assets/example1.jpeg" },
+  { category: "drinks", src: "./assets/example2.jpeg" }
 ];

@@ -204,7 +204,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                  event => setAddCategory(event.target.value))
+                    event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >

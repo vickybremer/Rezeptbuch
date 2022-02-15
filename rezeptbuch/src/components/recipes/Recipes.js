@@ -3,7 +3,7 @@ import { useState } from "react";
 import Header from "../header/Header.js";
 import styles from "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
-// import { icons } from "../../CategoryIcons.js";
+import { icons } from "../../CategoryIcons.js";
 
 export default function Recipes() {
   console.log("This is a test for Recipe Function");
@@ -15,11 +15,18 @@ export default function Recipes() {
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   //Icons werden gewählt (pro Kategorie)
-  // let icon;
-  // if (localData[0].category === "food") {
-  //   icon = icons[0].src;
-  //   console.log("hat funktioniert");
-  // }
+
+  function getIcon(recipeID) {
+    let iconSource;
+    if (localData[recipeID].category === "drinks") {
+
+      iconSource = icons[0].src;
+      console.log("hat funktioniert");
+    }
+    console.log(iconSource);
+    return iconSource
+
+  }
 
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null || localData.length === 0) {
@@ -27,14 +34,14 @@ export default function Recipes() {
     recipeList = <p className={styles.listTextStyling}>start cooking. ;)</p>;
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
-    recipeList = localData.map(recipe => (
+    recipeList = localData.map((recipe, id) => (
       <div key={recipe.id}>
         <div className={styles.listItemStyling}>
           <button
             className={styles.recipeButton}
             onClick={() => setSelectedRecipe(recipe.title)}
           >
-            {/* <img src={icon} width="25px" alt=""></img> */}
+            <img src={getIcon(id)} width="25px" alt=""></img>
             {recipe.title}
           </button>
         </div>
