@@ -2,6 +2,7 @@ import Header from "../header/Header.js";
 import useLocalStorage from "react-use-localstorage";
 import { useState, useEffect } from "react";
 import styles from "./AddRecipe.module.css";
+import { motion } from "framer-motion";
 
 export default function AddRecipe() {
   const [localRecipe, setLocalRecipe] = useLocalStorage("recipes", []);
@@ -204,7 +205,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                    event => setAddCategory(event.target.value))
+                  event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >
@@ -240,12 +241,13 @@ export default function AddRecipe() {
             </div>
           </div>
           <div className={styles.submitButtonStyling}>
-            <button
+            <motion.button
+              whileTap={{ scale: 0.9 }}
               type="submit"
               disabled={!addTitle || !addCategory || !addDate}
             >
               add
-            </button>
+            </motion.button>
           </div>
         </form>
       </div>

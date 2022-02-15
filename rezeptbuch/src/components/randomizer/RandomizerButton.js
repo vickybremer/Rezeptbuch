@@ -2,6 +2,7 @@ import { useState } from "react";
 import FullRecipe from "../fullRecipe/fullRecipe.js";
 import styles from "./Randomizer.module.css";
 import useLocalStorage from "react-use-localstorage";
+import { motion } from "framer-motion";
 
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
@@ -14,9 +15,13 @@ export default function RandomizerButton() {
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     handleRandomize = (
-      <button className={styles.shuffleButton} onClick={Randomize}>
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        className={styles.shuffleButton}
+        onClick={Randomize}
+      >
         shuffle
-      </button>
+      </motion.button>
     );
   }
 

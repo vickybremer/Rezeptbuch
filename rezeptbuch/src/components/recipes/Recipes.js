@@ -4,7 +4,7 @@ import Header from "../header/Header.js";
 import styles from "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
 import { icons } from "../../CategoryIcons.js";
-
+import { motion } from "framer-motion";
 
 export default function Recipes() {
   console.log("This is a test for Recipe Function");
@@ -62,7 +62,8 @@ export default function Recipes() {
     recipeList = localData.map((recipe, id) => (
       <div key={recipe.id}>
         <div className={styles.listItemStyling}>
-          <button
+          <motion.button
+            whileTap={{ scale: 0.95 }}
             className={styles.recipeButton}
             onClick={() => setSelectedRecipe(recipe.title)}
           >
@@ -71,10 +72,10 @@ export default function Recipes() {
               <h3>{recipe.title}</h3>
               <h5>{recipe.date}</h5>
             </div>
-          </button>
+          </motion.button>
         </div>
         {/* <button onClick={() => DeleteRecipe(recipe.id)}>x</button> */}
-      </div >
+      </div>
     ));
   }
 
@@ -85,8 +86,6 @@ export default function Recipes() {
     // console.log(id);
     console.log(xxxx + "   oki");
   };
-
-
 
   //Liste wird aufgerufen
   return (
