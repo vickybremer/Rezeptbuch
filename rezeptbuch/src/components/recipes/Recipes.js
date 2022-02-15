@@ -73,7 +73,7 @@ export default function Recipes() {
           </button>
         </div>
         {/* <button onClick={() => DeleteRecipe(recipe.id)}>x</button> */}
-      </div>
+      </div >
     ));
   }
 
