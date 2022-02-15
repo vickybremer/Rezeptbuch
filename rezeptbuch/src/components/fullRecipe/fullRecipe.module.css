@@ -59,19 +59,18 @@ li {
 }
 
 .infoBox button {
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0);
+  color:white;
   border-radius: 5px;
   border: none;
 
   text-align: center;
-  font-family: konnect;
-  color: rgb(56, 56, 56);
-  font-size: 13px;
+  font-family: montserrat;
+  font-size: 20px;
   font-weight: 400;
   text-transform: lowercase;
-  
-}
 
-/* .infoBox #stepsStyling {
-  margin-left: 10px;
-} */
+  margin: 33px;
+  float: right;
+  /* position: fixed; */
+}
