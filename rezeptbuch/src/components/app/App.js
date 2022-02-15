@@ -9,12 +9,16 @@ function App() {
   //Anfangsstate ist MainSite -> Alle eigenen Rezepte
   const [site, setSite] = useState("MainSite");
 
+  if (site === "Randomizer") {
+    console.log("yup");
+  }
+
   return (
     <div>
       <div>{site === "Randomizer" ? <Randomizer /> : ""}</div>
       <div>{site === "MainSite" ? <Recipes /> : ""}</div>
       <div>{site === "AddRecipe" ? <AddRecipe /> : ""}</div>
-      <Navigation nav={setSite}></Navigation>
+      <Navigation nav={setSite}>???</Navigation>
     </div>
   );
 }

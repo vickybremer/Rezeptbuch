@@ -1,28 +1,61 @@
 .RecipesBody {
-  padding-top: 33%;
+  padding-top: 22%;
   padding-bottom: 120px;
+  
 }
 
 .listItemStyling {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  padding-left: 23%;
-  padding-right: 23%;
+  align-items: center;
+  /* flex-direction: column; */
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height:90px;
+  
 }
 .listItemStyling button {
-  background-color: rgb(235, 210, 102);
+  display: flex;
+  background-color: #e9e7e5;
+  border: 2px solid black;
   width: 100%;
-  margin-bottom: 20px;
-  height: 35px;
-  border-radius: 5px;
-  border: none;
-
-  text-align: center;
-  font-family: konnect;
+  height: 90px;
+  border-radius: 10px;
+  
+  display: inline-flex;
+  align-items:center;
+}
+.recipeButton .textflex{
+  display: flex;
+}
+.recipeButton h3{
+  font-family: oswald;
   color: rgb(56, 56, 56);
-  font-size: 15px;
+  font-size: 22px;
   font-weight: 400;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-top:0px;
+  margin-bottom:0px;
+  text-align: left;
+
+}
+.recipeButton h5{
+  font-family: montserrat;
+  color: rgb(95, 95, 95);
+  font-size: 13px;
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-top:0px;
+  margin-bottom:0px;
+  text-align: left;
+}
+.recipeButton img{
+  width:70px;
+  margin: 10px;
 }
 
 .listTextStyling {
@@ -36,3 +69,6 @@
   font-weight: 400;
   text-transform: lowercase;
 }
+
+
+

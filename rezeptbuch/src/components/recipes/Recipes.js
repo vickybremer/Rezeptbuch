@@ -65,12 +65,15 @@ export default function Recipes() {
             className={styles.recipeButton}
             onClick={() => setSelectedRecipe(recipe.title)}
           >
-            <img src={getIcon(id)} width="25px" alt=""></img>
-            {recipe.title}
+            <img src={getIcon(id)} alt=""></img>
+            <div className="textFlex">
+              <h3>{recipe.title}</h3>
+              <h5>{recipe.date}</h5>
+            </div>
           </button>
         </div>
         {/* <button onClick={() => DeleteRecipe(recipe.id)}>x</button> */}
-      </div>
+      </div >
     ));
   }
 

@@ -18,6 +18,7 @@ h1 {
 }
 
 hr {
+  position: fixed;
   margin-top: -28px;
   border: none;
   height: 1px;
