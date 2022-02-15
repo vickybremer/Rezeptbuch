@@ -10,14 +10,14 @@ export default function Navigation({ nav }) {
         </button>
         <hr />
       </div>
-      <footer>
+      <div className={styles.footer}>
         <button className={styles.nav1} onClick={() => nav("Randomizer")}>
           Can't decide?
         </button>
         <button className={styles.nav2} onClick={() => nav("MainSite")}>
           My Recipes
         </button>
-      </footer>
+      </div>
     </div>
   );
 }
