@@ -81,14 +81,14 @@ export default function Recipes() {
               <h3>{recipe.title}</h3>
               <h5>{recipe.date}</h5>
             </div>
-          </motion.button><button
+          </motion.button>
+          <button
             className={styles.deleteButton}
             onClick={() => DeleteRecipe(recipe.title)}
           >
-            ⨯
+            <img src="./assets/symbols/delete-light.png"></img>
           </button>
         </div>
-
       </div>
     ));
   }
