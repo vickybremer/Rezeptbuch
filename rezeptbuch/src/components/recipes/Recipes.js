@@ -86,7 +86,7 @@ export default function Recipes() {
             className={styles.deleteButton}
             onClick={() => DeleteRecipe(recipe.title)}
           >
-            <img src="./assets/symbols/delete-light.png"></img>
+            x
           </button>
         </div>
       </div>

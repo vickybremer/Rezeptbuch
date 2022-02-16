@@ -96,16 +96,16 @@
 /* Delete Button */
 .listItemStyling .deleteButton {
   position: absolute;
+  font-family: montserrat;
+  font-size: 25px;
+  font-weight: 100;
   background-color: #faf9f800;
+  color: #b9b9b9;
   border: none;
+
   width: fit-content;
   height: 15px;
-
-  padding: 0px;
   /* float: right; */
   align-self: flex-start;
   margin: 10px;
-}
-.deleteButton img {
-  width: 13px;
 }

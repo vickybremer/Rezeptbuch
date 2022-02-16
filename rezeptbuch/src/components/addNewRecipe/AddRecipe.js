@@ -149,10 +149,7 @@ export default function AddRecipe() {
                     id={styles.buttonDelete}
                     onClick={() => DeleteIngredient(item.id)}
                   >
-                    <img
-                      width="10px"
-                      src="./assets/symbols/delete-dark.png"
-                    ></img>
+                    ✕
                   </button>
                 </div>
               ))}
@@ -185,10 +182,7 @@ export default function AddRecipe() {
                     id={styles.buttonDelete}
                     onClick={() => DeleteStep(item.id)}
                   >
-                    <img
-                      width="10px"
-                      src="./assets/symbols/delete-dark.png"
-                    ></img>
+                    ✕
                   </button>
                 </div>
               ))}
