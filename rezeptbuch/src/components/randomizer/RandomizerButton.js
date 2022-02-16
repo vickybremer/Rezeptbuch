@@ -3,7 +3,6 @@ import FullRecipe from "../fullRecipe/fullRecipe.js";
 import styles from "./Randomizer.module.css";
 import useLocalStorage from "react-use-localstorage";
 import { motion } from "framer-motion";
-import { icons } from "../../CategoryIcons.js";
 
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
@@ -21,13 +20,21 @@ export default function RandomizerButton() {
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     handleRandomize = (
-      <motion.button
-        whileTap={{ scale: 0.9 }}
-        className={styles.shuffleButton}
-        onClick={Randomize}
-      >
-        shuffle
-      </motion.button>
+      <div className={styles.randomizerContainer}>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          className={styles.shuffleButton}
+          onClick={Randomize}
+        >
+          Pick a meal
+        </motion.button>
+        <p>
+          Sometimes it’s hard to pick A meal. We totally get that. <br />
+          <br />
+          That’s why we’re here! ;)
+        </p>
+        <img src="./assets/icons/example1.jpeg"></img>
+      </div>
     );
   }
 
@@ -49,7 +56,7 @@ export default function RandomizerButton() {
           closeHandler={() => setCurrentRecipe(null)}
         />
       )}
-      <h3>{handleRandomize}</h3>
+      {handleRandomize}
     </div>
   );
 }

@@ -1,25 +1,48 @@
 .RandomizerBody {
   padding-top: 22%;
   padding-bottom: 120px;
-  padding-left: 23%;
-  padding-right: 23%;
+  padding-left: 13%;
+  padding-right: 13%;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Container for Shuffle/Text */
+.randomizerContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
 .shuffleButton {
-  background-color: rgb(235, 210, 102);
-  width: 100%;
-  margin-bottom: 20px;
-  height: 35px;
-  border-radius: 5px;
-  border: none;
-
-  text-align: center;
+  align-self: center;
   font-family: oswald;
-  color: rgb(56, 56, 56);
-  font-size: 15px;
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  background-color: rgb(21, 21, 21);
+  color: #faf9f8;
+  width: 130px;
+  height: 30px;
+  border-radius: 100px;
+  border: none;
+}
+.randomizerContainer p {
+  align-self: center;
+  width: 85%;
+  margin-top: 40px;
+  text-align: left;
+  font-family: oswald;
+  color: rgb(56, 56, 56);
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.randomizerContainer img {
+  width: 200px;
+  margin-top: 20px;
+  align-self: center;
 }
 
 /* Anzeige, wenn noch keine Rezepte eingetragen wurden */
