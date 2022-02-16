@@ -135,7 +135,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow-wrap: break-word;
 }
 .stepsStyling .singleElement {
   background-color: black;
@@ -147,6 +147,8 @@
   padding-right: 7px;
   height: 20px;
   margin-bottom: 3px;
+  max-width: 300px;
+  height: auto;
 }
 
 .stepsStyling input {

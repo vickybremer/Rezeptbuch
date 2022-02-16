@@ -1,17 +1,15 @@
-.fullRecipeContainer{
-  
+.fullRecipeContainer {
   display: flex;
   justify-content: center;
   /* margin-top:-320px; */
   background-color: rgba(0, 0, 0, 0.63);
-  width:100%;
+  width: 100%;
   height: 100%;
-  
+
   position: fixed;
   top: 0;
-    left: 0;
-    z-index: 999;
-  
+  left: 0;
+  z-index: 999;
 }
 
 .infoBox {
@@ -19,19 +17,20 @@
   background: rgb(0, 0, 0);
   overflow-y: scroll;
   flex-wrap: wrap;
-  
+
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
   width: 100%;
-  height: 700px;
-  margin-top: 28%;
+  height: 86%;
+  margin-bottom: 0px;
+  bottom: 0px;
 }
-.fullRecipeTextStyling{
+.fullRecipeTextStyling {
   padding: 30px;
   text-align: left;
 }
 /* Titel */
-.fullRecipeTextStyling h3{
+.fullRecipeTextStyling h3 {
   font-family: oswald;
   color: rgb(255, 255, 255);
   font-size: 28px;
@@ -39,7 +38,7 @@
   text-transform: uppercase;
 }
 /* Zutaten/Schritte */
-.fullRecipeTextStyling h4{
+.fullRecipeTextStyling h4 {
   font-family: oswald;
   color: rgb(255, 255, 255);
   font-size: 17px;
@@ -47,7 +46,7 @@
   text-transform: uppercase;
 }
 /* Text */
-.fullRecipeTextStyling h5{
+.fullRecipeTextStyling h5 {
   font-family: montserrat;
   color: rgb(255, 255, 255);
   font-size: 14px;
@@ -60,7 +59,7 @@ li {
 
 .infoBox button {
   background-color: rgba(0, 0, 0, 0);
-  color:white;
+  color: white;
   border-radius: 5px;
   border: none;
 
