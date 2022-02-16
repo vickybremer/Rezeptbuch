@@ -71,8 +71,8 @@
 .listTextStyling {
   position: relative;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   
