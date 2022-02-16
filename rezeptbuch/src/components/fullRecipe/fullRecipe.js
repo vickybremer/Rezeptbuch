@@ -25,7 +25,7 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
               </li>
             ))}
           </h5>
-          <h5>{"created on: " + recipe[0].date}</h5>
+          <h4>{"created on: " + recipe[0].date}</h4>
         </div>
       </div>
     </div>
