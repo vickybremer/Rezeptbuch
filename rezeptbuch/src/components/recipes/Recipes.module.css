@@ -69,8 +69,8 @@
 .listTextStyling {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   flex-direction: column;
 }
 /* Text */
@@ -103,6 +103,7 @@
   width:fit-content;
   height: fit-content;
   margin-bottom: 50px;
-  margin-left: 270px;
+  /* float: right; */
+  left:310px;
   
 }
