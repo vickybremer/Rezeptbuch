@@ -160,9 +160,13 @@ export default function AddRecipe() {
                 onChange={event => setCurrentIngredient(event.target.value)}
                 value={currentIngredient}
               ></input>
-              <button id={styles.buttonAdd} onClick={AddIngredient}>
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                id={styles.buttonAdd}
+                onClick={AddIngredient}
+              >
                 +
-              </button>
+              </motion.button>
             </div>
           </div>
           <br />
@@ -189,9 +193,13 @@ export default function AddRecipe() {
                 onChange={event => setCurrentStep(event.target.value)}
                 value={currentStep}
               ></input>
-              <button id={styles.buttonAdd} onClick={AddStep}>
+              <motion.button
+                whileTap={{ scale: 0.9 }}
+                id={styles.buttonAdd}
+                onClick={AddStep}
+              >
                 +
-              </button>
+              </motion.button>
             </div>
           </div>
           <br />
