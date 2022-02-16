@@ -1,6 +1,7 @@
 .RecipesBody {
   padding-top: 17%;
   padding-bottom: 120px;
+  max-width:375px;
 }
 
 /* Container der Liste */
@@ -13,6 +14,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   height: 90px;
+  max-width:375px;
 }
 /* Button Styling (der Liste) */
 .listItemStyling button {
