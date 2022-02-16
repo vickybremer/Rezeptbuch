@@ -61,17 +61,20 @@
 .listTextStyling {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
 }
 .listTextStyling p {
-  text-align: center;
+  text-align: left;
   font-family: oswald;
   color: rgb(56, 56, 56);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
+  margin-top: -85px;
+  margin-left: 105px;
 }
 .listTextStyling img {
-  margin-top: 50%;
-  width: 200px;
+  margin-top: 5%;
+  width: 350px;
 }

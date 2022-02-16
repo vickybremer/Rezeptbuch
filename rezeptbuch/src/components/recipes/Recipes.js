@@ -61,8 +61,11 @@ export default function Recipes() {
     localData = [];
     Test = (
       <div className={styles.listTextStyling}>
-        <img src={icons[0].src} alt=""></img>
-        <p>start cooking. :)</p>
+        <img src="./assets/no-recipes.png" alt=""></img>
+        <p>
+          Add your first <br />
+          recipe. :)
+        </p>
       </div>
     );
   } else {

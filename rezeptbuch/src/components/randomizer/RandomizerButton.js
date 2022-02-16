@@ -14,7 +14,7 @@ export default function RandomizerButton() {
     localData = [];
     handleRandomize = (
       <div className={styles.noRecipePage}>
-        <img src={icons[0].src} alt=""></img>
+        <img src="./assets/no-recipes.png" alt=""></img>
         <p>no recipes yet.</p>
       </div>
     );
