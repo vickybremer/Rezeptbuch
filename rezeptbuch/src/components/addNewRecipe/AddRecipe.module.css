@@ -327,7 +327,7 @@
   font-family: oswald;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  background-color: #e6842f;
+  background-color: #eb6a30;
   color: #faf9f8;
   margin-top: 40px;
   width: 130px;
@@ -336,6 +336,6 @@
   border: none;
 }
 .submitButtonStyling button:disabled {
-  background-color: #e6842f46;
-  color: #e6842f;
+  background-color: #eb6b305e;
+  color: #eb6a30;
 }
