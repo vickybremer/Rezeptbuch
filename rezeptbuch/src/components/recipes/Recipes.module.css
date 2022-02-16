@@ -1,6 +1,7 @@
 .RecipesBody {
   padding-top: 17%;
   padding-bottom: 120px;
+  max-width:375px;
 }
 
 /* Container der Liste */
@@ -13,6 +14,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   height: 90px;
+  max-width:375px;
 }
 /* Button Styling (der Liste) */
 .listItemStyling button {
@@ -67,8 +69,8 @@
 .listTextStyling {
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* align-items: center; */
   flex-direction: column;
 }
 /* Text */
@@ -101,6 +103,7 @@
   width:fit-content;
   height: fit-content;
   margin-bottom: 50px;
-  margin-left: 270px;
+  /* float: right; */
+  left:310px;
   
 }
