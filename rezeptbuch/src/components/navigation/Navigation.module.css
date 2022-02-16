@@ -66,14 +66,11 @@
 }
 /* Styling */
 .navButtons .nav3 {
+  background-color: #faf9f800;
   position: absolute;
   font-family: oswald;
-  background-color: rgba(255, 255, 255, 0);
-  font-size: 37px;
-  font-weight: 400;
-  color: rgb(21, 21, 21);
   border: none;
-  top: 17px;
+  top: 38px;
   right: 20px;
 }
 /* Anderes Styling on Click */
