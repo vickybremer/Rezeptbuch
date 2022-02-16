@@ -10,6 +10,7 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
         <button onClick={closeHandler}> ⌄ </button>
         <div className={styles.fullRecipeTextStyling}>
           <h3>{recipe[0].title}</h3>
+
           <h4>ingredients</h4>
           <h5>
             {recipe[0].ingredients.map(item => (
@@ -26,7 +27,6 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
           </h5>
           <h5>{"created on: " + recipe[0].date}</h5>
         </div>
-
       </div>
     </div>
   );
