@@ -212,6 +212,7 @@ padding:0;
   border-radius: 100px;
   border: 2px solid black;
 }
+/* Schritte Add */
 .stepsStyling #buttonAdd {
   font-family: montserrat;
   font-size: 20px;
@@ -224,9 +225,10 @@ padding:0;
   height: 30px;
   margin-left: 10px;
   margin-top: 2px;
-  border-radius: 100px;
+  border-radius: 50%;
   border: none;
 }
+/* Schritte Löschen */
 .stepsStyling #buttonDelete {
   font-family: montserrat;
   text-align: center;
