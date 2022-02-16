@@ -3,11 +3,9 @@
   padding-bottom: 120px;
   display: flex;
   justify-content: center;
-  
 }
 
 /* TITEL */
-
 /* Titel Box Styling */
 .titleStyling {
   text-align: center;
@@ -38,7 +36,7 @@
   height: 30px;
   border-radius: 100px;
   border: 2px solid black;
-  margin:20px;
+  margin: 20px;
 }
 
 /* ZUTATEN */
@@ -46,11 +44,10 @@
 .inputAndButtonStyling {
   display: flex;
   justify-content: center;
-  margin:20px;
+  margin: 20px;
 }
-
 /* Zutaten Box */
-.ingredientStyling{
+.ingredientStyling {
   text-align: center;
   background-color: #f2f1f0;
   border-radius: 16px;
@@ -58,7 +55,6 @@
   padding-bottom: 5px;
   padding-top: 10px;
 }
-
 /* Zutaten Header */
 .ingredientStyling h3 {
   color: black;
@@ -101,7 +97,7 @@
   max-width: 260px;
   height: auto;
 }
-
+/* Zutaten Eingabefeld */
 .ingredientStyling input {
   background-color: #faf9f8;
   font-family: montserrat;
@@ -118,8 +114,8 @@
 .ingredientStyling #buttonAdd {
   font-family: montserrat;
   font-size: 20px;
-  font-weight: 500;
-  padding:0px;
+  font-weight: 600;
+  padding: 0px;
   text-transform: lowercase;
   background-color: rgb(0, 0, 0);
   color: rgb(224, 224, 224);
@@ -142,16 +138,13 @@
   height: 15px;
   border-radius: 5px;
   border: none;
-  margin:2px;
-padding:0;
-  
+  margin: 2px;
+  padding: 0;
 }
 
-
 /* SCHRITTE */
-
 /* Schritte Box */
-.stepsStyling{
+.stepsStyling {
   text-align: center;
   background-color: #f2f1f0;
   border-radius: 16px;
@@ -201,7 +194,7 @@ padding:0;
   max-width: 260px;
   height: auto;
 }
-
+/* Schritte Eingabefeld */
 .stepsStyling input {
   background-color: #faf9f8;
   font-family: montserrat;
@@ -218,9 +211,9 @@ padding:0;
 .stepsStyling #buttonAdd {
   font-family: montserrat;
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
-padding:0px;
+  padding: 0px;
   text-transform: lowercase;
   background-color: rgb(0, 0, 0);
   color: rgb(224, 224, 224);
@@ -243,11 +236,11 @@ padding:0px;
   height: 15px;
   border-radius: 5px;
   border: none;
-  margin:2px;
-padding:0;
+  margin: 2px;
+  padding: 0;
 }
 
-.flexStyling{
+.flexStyling {
   text-align: center;
   background-color: #f2f1f0;
   border-radius: 16px;
@@ -255,7 +248,6 @@ padding:0;
   padding-bottom: 5px;
   padding-top: 10px;
 }
-
 .categoryStyling option {
   color: rgb(8, 14, 12);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
