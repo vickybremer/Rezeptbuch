@@ -86,7 +86,7 @@ export default function Recipes() {
             className={styles.deleteButton}
             onClick={() => DeleteRecipe(recipe.title)}
           >
-            x
+            ⨯
           </button>
         </div>
       </div>
