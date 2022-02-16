@@ -8,7 +8,7 @@
 
 /* TITEL */
 
-/* Titel Styling */
+/* Titel Box Styling */
 .titleStyling {
   text-align: center;
   background-color: #f2f1f0;
@@ -17,6 +17,7 @@
   padding-bottom: 5px;
   padding-top: 10px;
 }
+/* Titel Header */
 .titleStyling h3 {
   color: black;
   text-align: center;
@@ -26,10 +27,8 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin: 0px;
-  
-  
-  
 }
+/* Titel Input */
 .titleStyling input {
   background-color: #faf9f8;
   font-family: montserrat;
@@ -42,13 +41,15 @@
   margin:20px;
 }
 
-/* Zutaten Styling */
+/* ZUTATEN */
+/* Zutaten Input und Button */
 .inputAndButtonStyling {
   display: flex;
   justify-content: center;
   margin:20px;
 }
 
+/* Zutaten Box */
 .ingredientStyling{
   text-align: center;
   background-color: #f2f1f0;
@@ -58,6 +59,7 @@
   padding-top: 10px;
 }
 
+/* Zutaten Header */
 .ingredientStyling h3 {
   color: black;
   text-align: center;
@@ -68,6 +70,7 @@
   letter-spacing: 0.1em;
   margin-top: 0px;
 }
+/* Zutaten einzeln text*/
 .ingredientStyling h5 {
   color: rgb(255, 255, 255);
   text-align: center;
@@ -75,23 +78,28 @@
   font-size: 13px;
   font-weight: 400;
 }
+/* Zutaten einzeln div */
 .ingredientStyling .ingredientsListStyling {
-  
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  align-items: center;
   flex-wrap: wrap;
-  overflow: hidden;
+  overflow-wrap: break-word;
 }
+/* Zutaten einzeln */
 .ingredientStyling .singleElement {
   background-color: black;
-  border-radius: 100px;
+  text-align: left;
+  border-radius: 20px;
   width: fit-content;
   height: fit-content;
-  padding-top: 2px;
-  padding-left: 7px;
-  padding-right: 7px;
+  padding: 10px;
   height: 20px;
-  margin: none;
+  margin-bottom: 5px;
+  margin-left: 7px;
+  margin-right: 0px;
+  max-width: 260px;
+  height: auto;
 }
 
 .ingredientStyling input {
@@ -123,25 +131,24 @@
 }
 .ingredientStyling #buttonDelete {
   font-family: montserrat;
-  font-size: 13px;
-  font-weight: 400;
-
-  margin-top: 2px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 1000;
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(0, 0, 0);
+  color: #212121;
   width: 15px;
   height: 15px;
   border-radius: 5px;
   border: none;
-
-  margin-left: 5px;
+  margin:2px;
+padding:0;
+  
 }
-
 
 
 /* SCHRITTE */
 
-/* Schritte ganzes Feld */
+/* Schritte Box */
 .stepsStyling{
   text-align: center;
   background-color: #f2f1f0;
@@ -150,7 +157,7 @@
   padding-bottom: 5px;
   padding-top: 10px;
 }
-/* Schritte Überschrift */
+/* Schritte Header */
 .stepsStyling h3 {
   color: black;
   text-align: center;
@@ -161,7 +168,7 @@
   letter-spacing: 0.1em;
   margin-top: 0px;
 }
-/* Schritte einzeln */
+/* Schritte einzeln text */
 .stepsStyling h5 {
   color: rgb(255, 255, 255);
   text-align: center;
@@ -170,26 +177,25 @@
   font-weight: 400;
   margin: 0px;
 }
-
+/* Schritte einzeln div */
 .stepsStyling .stepsListStyling {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   flex-wrap: wrap;
   overflow-wrap: break-word;
 }
+/* Schritte einzeln */
 .stepsStyling .singleElement {
   background-color: black;
   text-align: left;
-  border-radius: 10px;
+  border-radius: 20px;
   width: fit-content;
   height: fit-content;
-  /* padding-top: 2px;
-  padding-left: 7px;
-  padding-right: 7px; */
   padding: 10px;
   height: 20px;
-  margin: none;
+  margin-bottom: 5px;
+  margin-left: 7px;
   max-width: 260px;
   height: auto;
 }
@@ -223,18 +229,17 @@
 }
 .stepsStyling #buttonDelete {
   font-family: montserrat;
-  font-size: 13px;
-  font-weight: 400;
-
-  margin-top: 2px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 1000;
   background-color: rgba(0, 0, 0, 0);
-  color: rgb(0, 0, 0);
+  color: #212121;
   width: 15px;
   height: 15px;
   border-radius: 5px;
   border: none;
-
-  margin-left: 5px;
+  margin:2px;
+padding:0;
 }
 
 .flexStyling{

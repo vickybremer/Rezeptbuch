@@ -152,7 +152,7 @@ export default function AddRecipe() {
                     id={styles.buttonDelete}
                     onClick={() => DeleteIngredient(item.id)}
                   >
-                    x
+                    ✕
                   </button>
                 </div>
               ))}
@@ -181,7 +181,7 @@ export default function AddRecipe() {
                     id={styles.buttonDelete}
                     onClick={() => DeleteStep(item.id)}
                   >
-                    X
+                    ✕
                   </button>
                 </div>
               ))}
@@ -206,7 +206,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                  event => setAddCategory(event.target.value))
+                    event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >
