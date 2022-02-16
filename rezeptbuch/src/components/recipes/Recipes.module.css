@@ -6,14 +6,16 @@
 
 /* Container der Liste */
 .listItemStyling {
+  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center;
+  align-items: center; */
   padding-left: 8%;
   padding-right: 8%;
   padding-top: 5px;
   padding-bottom: 5px;
   height: 90px;
+  justify-content: flex-end;
   /* max-width:375px; */
 }
 /* Button Styling (der Liste) */
@@ -63,15 +65,14 @@
   border: 2px solid rgb(21, 21, 21);
   border-radius: 10px;
 }
-.recipeButton{z-index: 0;}
 
 /* Anzeige, wenn noch keine Rezepte eingetragen wurden */
 /* Container */
 .listTextStyling {
   position: relative;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   justify-content: flex-end;
   
@@ -96,7 +97,7 @@
 
 /* Delete Button */
 .listItemStyling .deleteButton {
-  
+  position: absolute;
   font-family: montserrat;
   font-size: 25px;
   font-weight: 100;
@@ -105,10 +106,11 @@
   border: none;
   
   width:fit-content;
-  height: fit-content;
+  height: 15px;
   
   /* float: right; */
   align-self:flex-start;
- z-index: 999;
+  margin:10px;
+ 
   
 }
