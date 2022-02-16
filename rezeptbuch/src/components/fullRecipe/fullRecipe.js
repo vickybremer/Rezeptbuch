@@ -7,7 +7,9 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
   return (
     <div className={styles.fullRecipeContainer}>
       <div className={styles.infoBox}>
-        <button onClick={closeHandler}> ⌄ </button>
+        <button onClick={closeHandler}>
+          <img width="20px" src="./assets/symbols/arrow.png"></img>
+        </button>
         <div className={styles.fullRecipeTextStyling}>
           <h3>{recipe[0].title}</h3>
 
@@ -25,7 +27,7 @@ export default function FullRecipe({ listData, selectedRecipe, closeHandler }) {
               </li>
             ))}
           </h5>
-          <h4>{"created on: " + recipe[0].date}</h4>
+          <h2>{"created on: " + recipe[0].date}</h2>
         </div>
       </div>
     </div>
