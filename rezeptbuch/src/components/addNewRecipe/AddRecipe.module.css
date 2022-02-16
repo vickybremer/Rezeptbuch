@@ -139,7 +139,8 @@
 }
 .stepsStyling .singleElement {
   background-color: black;
-  border-radius: 100px;
+  text-align: left;
+  border-radius: 10px;
   width: fit-content;
   height: fit-content;
   padding-top: 2px;
