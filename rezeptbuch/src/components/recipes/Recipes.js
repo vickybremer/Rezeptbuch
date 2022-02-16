@@ -85,7 +85,12 @@ export default function Recipes() {
             </div>
           </motion.button>
         </div>
-        <button onClick={() => DeleteRecipe(recipe.title)}>x</button>
+        <button
+          className={styles.deleteButton}
+          onClick={() => DeleteRecipe(recipe.title)}
+        >
+          x
+        </button>
       </div>
     ));
   }

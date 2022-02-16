@@ -1,8 +1,8 @@
+/* Komplette Seite, wenn sich Popup öffnet */
 .fullRecipeContainer {
   display: flex;
   justify-content: center;
-  /* margin-top:-320px; */
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: rgba(21, 21, 21, 0.801);
   width: 100%;
   height: 100%;
 
@@ -12,9 +12,10 @@
   z-index: 999;
 }
 
+/* Container des Popups */
 .infoBox {
   position: fixed;
-  background: rgb(0, 0, 0);
+  background: rgb(21, 21, 21);
   overflow-y: scroll;
   flex-wrap: wrap;
 
@@ -25,6 +26,7 @@
   margin-bottom: 0px;
   bottom: 0px;
 }
+/* Styling aller Textelemente im Popup */
 .fullRecipeTextStyling {
   padding: 30px;
   text-align: left;
@@ -32,7 +34,7 @@
 /* Titel */
 .fullRecipeTextStyling h3 {
   font-family: oswald;
-  color: rgb(255, 255, 255);
+  color: #faf9f8;
   font-size: 28px;
   font-weight: 600;
   text-transform: uppercase;
@@ -40,7 +42,7 @@
 /* Zutaten/Schritte */
 .fullRecipeTextStyling h4 {
   font-family: oswald;
-  color: rgb(255, 255, 255);
+  color: #faf9f8;
   font-size: 17px;
   font-weight: 200;
   text-transform: uppercase;
@@ -48,28 +50,29 @@
 /* Text */
 .fullRecipeTextStyling h5 {
   font-family: montserrat;
-  color: rgb(255, 255, 255);
+  color: #faf9f8;
   font-size: 14px;
   font-weight: 300;
 }
 
+/* Auflistung ist nummeriert */
 li {
   list-style: decimal;
 }
 
+/* Button um gesamtes Rezept zu schließen */
 .infoBox button {
-  background-color: rgba(0, 0, 0, 0);
-  color: white;
+  background-color: rgba(21, 21, 21, 0);
+  color: #faf9f8;
   border-radius: 5px;
   border: none;
 
   text-align: center;
   font-family: montserrat;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: lowercase;
 
   margin: 33px;
   float: right;
-  /* position: fixed; */
 }
