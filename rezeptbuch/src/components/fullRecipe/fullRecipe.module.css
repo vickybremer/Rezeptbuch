@@ -41,13 +41,14 @@
   text-transform: uppercase;
   margin-bottom: 0px;
 }
-/* Zutaten/Schritte/Datum */
+/* Zutaten/Schritte */
 .fullRecipeTextStyling h4 {
   font-family: oswald;
   color: #faf9f8;
   font-size: 17px;
   font-weight: 500;
   text-transform: uppercase;
+  margin-bottom: 4px;
 }
 /* Text */
 .fullRecipeTextStyling h5 {
@@ -55,6 +56,18 @@
   color: #faf9f8;
   font-size: 14px;
   font-weight: 300;
+  margin-top: 0px;
+}
+/* Datum  */
+.fullRecipeTextStyling h2 {
+  text-align: center;
+  font-family: oswald;
+  color: #faf9f8;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  /* margin-left: -30px; */
 }
 
 /* Auflistung ist nummeriert */

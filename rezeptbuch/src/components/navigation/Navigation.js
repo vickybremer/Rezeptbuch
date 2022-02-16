@@ -7,7 +7,7 @@ export default function Navigation({ nav }) {
     <div className={styles.navButtons}>
       <div className={styles.nav3Container}>
         <button className={styles.nav3} onClick={() => nav("AddRecipe")}>
-          +
+          <img width="18px" src="./assets/symbols/add.png"></img>
         </button>
         <hr />
       </div>
