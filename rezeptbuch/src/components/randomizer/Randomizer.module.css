@@ -1,3 +1,7 @@
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .RandomizerBody {
   padding-top: 22%;
   padding-bottom: 120px;

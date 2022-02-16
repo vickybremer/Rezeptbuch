@@ -1,8 +1,6 @@
-/* Komplette Seite, wenn sich Popup öffnet */
-
 * {
   -webkit-tap-highlight-color: transparent;
-}
+} /* Komplette Seite, wenn sich Popup öffnet */
 .fullRecipeContainer {
   display: flex;
   justify-content: center;
