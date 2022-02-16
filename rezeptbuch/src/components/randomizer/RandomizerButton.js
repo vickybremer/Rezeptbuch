@@ -33,7 +33,7 @@ export default function RandomizerButton() {
           <br />
           That’s why we’re here! ;)
         </p>
-        <img src="./assets/icons/example1.jpeg"></img>
+        <img src="logo.png"></img>
       </div>
     );
   }

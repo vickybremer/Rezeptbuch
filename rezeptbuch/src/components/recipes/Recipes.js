@@ -24,28 +24,28 @@ export default function Recipes() {
       iconSource = icons[1].src;
     }
     if (localData[recipeID].category === "main") {
-      iconSource = icons[0].src;
+      iconSource = icons[2].src;
     }
     if (localData[recipeID].category === "dessert") {
-      iconSource = icons[1].src;
+      iconSource = icons[3].src;
     }
     if (localData[recipeID].category === "snack") {
-      iconSource = icons[0].src;
+      iconSource = icons[4].src;
     }
     if (localData[recipeID].category === "side dish") {
-      iconSource = icons[1].src;
+      iconSource = icons[5].src;
     }
     if (localData[recipeID].category === "salad") {
-      iconSource = icons[0].src;
+      iconSource = icons[6].src;
     }
     if (localData[recipeID].category === "soup") {
-      iconSource = icons[1].src;
+      iconSource = icons[7].src;
     }
     if (localData[recipeID].category === "drink") {
-      iconSource = icons[0].src;
+      iconSource = icons[8].src;
     }
     if (localData[recipeID].category === "baked good") {
-      iconSource = icons[1].src;
+      iconSource = icons[9].src;
     }
 
     console.log(iconSource);
