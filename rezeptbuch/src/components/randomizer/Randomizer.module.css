@@ -22,14 +22,21 @@
   letter-spacing: 0.1em;
 }
 
-.bla {
-  padding-top: 30%;
-  padding-bottom: 85px;
-
+/* Anzeige, wenn noch keine Rezepte eingetragen wurden */
+.noRecipePage {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.noRecipePage p {
   text-align: center;
-  font-family: montserrat;
+  font-family: oswald;
   color: rgb(56, 56, 56);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
-  text-transform: lowercase;
+  text-transform: uppercase;
+}
+.noRecipePage img {
+  margin-top: 50%;
+  width: 200px;
 }

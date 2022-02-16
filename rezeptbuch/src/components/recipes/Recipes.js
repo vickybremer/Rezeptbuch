@@ -1,5 +1,5 @@
 import FullRecipe from "../fullRecipe/fullRecipe.js";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "../header/Header.js";
 import styles from "./Recipes.module.css";
 import useLocalStorage from "react-use-localstorage";
@@ -10,7 +10,8 @@ export default function Recipes() {
   console.log("This is a test for Recipe Function");
 
   let localData = JSON.parse(localStorage.getItem("recipes"));
-  let recipeList;
+
+  const [recipeList, setRecipeList] = useState(localData);
 
   //zeigt, welches Rezept angezeigt wird/werden soll
   const [selectedRecipe, setSelectedRecipe] = useState(null);
@@ -53,13 +54,20 @@ export default function Recipes() {
     return iconSource;
   }
 
+  let Test;
+
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null || localData.length === 0) {
     localData = [];
-    recipeList = <p className={styles.listTextStyling}>start cooking. ;)</p>;
+    Test = (
+      <div className={styles.listTextStyling}>
+        <img src={icons[0].src} alt=""></img>
+        <p>start cooking. :)</p>
+      </div>
+    );
   } else {
-    localData = JSON.parse(localStorage.getItem("recipes"));
-    recipeList = localData.map((recipe, id) => (
+    // localData = JSON.parse(localStorage.getItem("recipes"));
+    Test = recipeList.map((recipe, id) => (
       <div key={recipe.id}>
         <div className={styles.listItemStyling}>
           <motion.button
@@ -74,25 +82,30 @@ export default function Recipes() {
             </div>
           </motion.button>
         </div>
-        {/* <button onClick={() => DeleteRecipe(recipe.id)}>x</button> */}
+        <button onClick={() => DeleteRecipe(recipe.title)}>x</button>
       </div>
     ));
   }
 
-  const xxxx = { id: localData.title };
   const DeleteRecipe = id => {
-    // const filteredRecipes = xxxx.filter(recipe => recipe.id !== id);
-    // setSelectedRecipe(filteredRecipes);
-    // console.log(id);
-    console.log(xxxx + "   oki");
+    const filteredRecipes = recipeList.filter(recipe => recipe.title !== id);
+    setRecipeList(filteredRecipes);
+    console.log(recipeList);
+    console.log(id + "   oki");
   };
 
+  useEffect(() => {
+    localStorage.setItem("recipes", JSON.stringify(recipeList));
+    localData = JSON.parse(localStorage.getItem("recipes"));
+  }, [recipeList]);
+
+  console.log(localData);
   //Liste wird aufgerufen
   return (
     <div className={styles.RecipesBody}>
       <Header title="My Recipes" />
       <div>
-        <h3>{recipeList}</h3>
+        <h3>{Test}</h3>
 
         {selectedRecipe && (
           <FullRecipe

@@ -57,14 +57,21 @@
   border-radius: 10px;
 }
 
+/* Anzeige, wenn noch keine Rezepte eingetragen wurden */
 .listTextStyling {
-  padding-top: 30%;
-  padding-bottom: 85px;
-
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.listTextStyling p {
   text-align: center;
-  font-family: montserrat;
+  font-family: oswald;
   color: rgb(56, 56, 56);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
-  text-transform: lowercase;
+  text-transform: uppercase;
+}
+.listTextStyling img {
+  margin-top: 50%;
+  width: 200px;
 }

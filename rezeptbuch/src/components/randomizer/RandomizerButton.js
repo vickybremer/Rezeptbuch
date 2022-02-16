@@ -3,6 +3,7 @@ import FullRecipe from "../fullRecipe/fullRecipe.js";
 import styles from "./Randomizer.module.css";
 import useLocalStorage from "react-use-localstorage";
 import { motion } from "framer-motion";
+import { icons } from "../../CategoryIcons.js";
 
 export default function RandomizerButton() {
   let localData = JSON.parse(localStorage.getItem("recipes"));
@@ -11,7 +12,12 @@ export default function RandomizerButton() {
   let handleRandomize;
   if (localData === null || localData.length === 0) {
     localData = [];
-    handleRandomize = <p className={styles.bla}>no recipes yet.</p>;
+    handleRandomize = (
+      <div className={styles.noRecipePage}>
+        <img src={icons[0].src} alt=""></img>
+        <p>no recipes yet.</p>
+      </div>
+    );
   } else {
     localData = JSON.parse(localStorage.getItem("recipes"));
     handleRandomize = (
