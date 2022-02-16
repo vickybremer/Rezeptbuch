@@ -1,12 +1,12 @@
-#Rezeptbuch - „“
+#Rezeptbuch
 
 Das Projekt wurde von Victoria Bremer und Isabel Pfalzgraf im Wintersemester 2021/2022 im Rahmen des React.js-Electives an der Hochschule Darmstadt erstellt.
 
-_WAS MACHT „“:_
+_WAS MACHT UNSER „REZEPTBUCH“:_
 Die Applikation „“ dient dazu eigene Rezepte zu notieren, aufzurufen und zufällige Rezepte
 ausgegeben zu bekommen, falls die Essenswahl mal nicht so leicht fällt.
 
-_WIE FUNKTIONIERT „“:_
+_WIE FUNKTIONIERT „REZEPTBUCH“:_
 Über Input-Felder werden die Daten eingegeben. Auf der Startseite werden alle eingegebenen
 Rezepte aufgelistet. Die Navigation zwischen den zwei Hauptseiten erfolgt über die Buttons am unteren Bildschirmrand. So kann zwischen der Rezeptliste und einem Rezept-"Randomizer" ausgewählt werden.
 
