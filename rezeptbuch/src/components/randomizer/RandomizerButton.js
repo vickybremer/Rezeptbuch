@@ -31,16 +31,11 @@ export default function RandomizerButton() {
     );
   }
 
-  //Mit Conditional Rendering prüfen, ob schon was in current Recipe steht
-  //evtl. mit Conditional Rendering prüfen, dass die gleichen Rezepte nicht hintereinander
-  //geshufflet werden können.
   const [currentRecipe, setCurrentRecipe] = useState(null);
 
   function Randomize() {
     const random = Math.floor(Math.random() * localData.length);
     const RandomRecipe = localData[random].title;
-
-    console.log(RandomRecipe);
 
     setCurrentRecipe(RandomRecipe);
   }

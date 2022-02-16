@@ -96,9 +96,6 @@ export default function AddRecipe() {
       ingredient => ingredient.id !== id
     );
     setAddIngredients(filteredIngredients);
-    // console.log(id);
-    // console.log(filteredIngredients);
-    // console.log(addIngredients);
   };
 
   //Neuer Schritt
@@ -131,7 +128,7 @@ export default function AddRecipe() {
           <div className={styles.titleStyling}>
             <h3>Title</h3>
             <input
-              maxlength="35"
+              maxLength="35"
               placeholder="add title"
               onChange={
                 (handleTitleChange, event => setAddTitle(event.target.value))
@@ -206,7 +203,7 @@ export default function AddRecipe() {
               <select
                 onChange={
                   (handleCategoryChange,
-                    event => setAddCategory(event.target.value))
+                  event => setAddCategory(event.target.value))
                 }
                 value={addCategory}
               >

@@ -7,8 +7,6 @@ import { icons } from "../../CategoryIcons.js";
 import { motion } from "framer-motion";
 
 export default function Recipes() {
-  console.log("This is a test for Recipe Function");
-
   let localData = JSON.parse(localStorage.getItem("recipes"));
 
   const [recipeList, setRecipeList] = useState(localData);
@@ -54,12 +52,12 @@ export default function Recipes() {
     return iconSource;
   }
 
-  let Test;
+  let Switch;
 
   //Liste der Rezepttitel wird erstellt (sind Buttons)
   if (localData === null || localData.length === 0) {
     localData = [];
-    Test = (
+    Switch = (
       <div className={styles.listTextStyling}>
         <img src="./assets/no-recipes.png" alt=""></img>
         <p>
@@ -70,8 +68,8 @@ export default function Recipes() {
     );
   } else {
     // localData = JSON.parse(localStorage.getItem("recipes"));
-    Test = recipeList.map((recipe, id) => (
-      <div key={recipe.id}>
+    Switch = recipeList.map((recipe, id) => (
+      <div key={recipe.title}>
         <div className={styles.listItemStyling}>
           <motion.button
             whileTap={{ scale: 0.95 }}
@@ -98,8 +96,6 @@ export default function Recipes() {
   const DeleteRecipe = id => {
     const filteredRecipes = recipeList.filter(recipe => recipe.title !== id);
     setRecipeList(filteredRecipes);
-    console.log(recipeList);
-    console.log(id + "   oki");
   };
 
   useEffect(() => {
@@ -107,13 +103,12 @@ export default function Recipes() {
     localData = JSON.parse(localStorage.getItem("recipes"));
   }, [recipeList]);
 
-  console.log(localData);
   //Liste wird aufgerufen
   return (
     <div className={styles.RecipesBody}>
       <Header title="My Recipes" />
       <div>
-        <h3>{Test}</h3>
+        <h3>{Switch}</h3>
 
         {selectedRecipe && (
           <FullRecipe

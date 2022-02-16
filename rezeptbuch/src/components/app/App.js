@@ -9,10 +9,6 @@ function App() {
   //Anfangsstate ist MainSite -> Alle eigenen Rezepte
   const [site, setSite] = useState("MainSite");
 
-  if (site === "Randomizer") {
-    console.log("yup");
-  }
-
   return (
     <div>
       <div>{site === "Randomizer" ? <Randomizer /> : ""}</div>
