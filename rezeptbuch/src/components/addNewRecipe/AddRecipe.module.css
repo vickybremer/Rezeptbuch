@@ -3,14 +3,19 @@
   padding-bottom: 120px;
   display: flex;
   justify-content: center;
+  
 }
+
+/* TITEL */
 
 /* Titel Styling */
 .titleStyling {
   text-align: center;
   background-color: #f2f1f0;
   border-radius: 16px;
-  height: 90px;
+  height: auto;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 .titleStyling h3 {
   color: black;
@@ -20,23 +25,39 @@
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin: 0px;
+  
+  
+  
 }
 .titleStyling input {
   background-color: #faf9f8;
   font-family: montserrat;
   font-size: 13px;
   font-weight: 400;
-  width: 95%;
+  width: 265px;
   height: 30px;
   border-radius: 100px;
   border: 2px solid black;
+  margin:20px;
 }
 
 /* Zutaten Styling */
 .inputAndButtonStyling {
   display: flex;
   justify-content: center;
+  margin:20px;
 }
+
+.ingredientStyling{
+  text-align: center;
+  background-color: #f2f1f0;
+  border-radius: 16px;
+  height: auto;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
 .ingredientStyling h3 {
   color: black;
   text-align: center;
@@ -45,6 +66,7 @@
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-top: 0px;
 }
 .ingredientStyling h5 {
   color: rgb(255, 255, 255);
@@ -54,6 +76,7 @@
   font-weight: 400;
 }
 .ingredientStyling .ingredientsListStyling {
+  
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -68,7 +91,7 @@
   padding-left: 7px;
   padding-right: 7px;
   height: 20px;
-  margin-bottom: 3px;
+  margin: none;
 }
 
 .ingredientStyling input {
@@ -78,7 +101,7 @@
   font-size: 13px;
   font-weight: 400;
 
-  width: 85%;
+  width: 220px;
   height: 30px;
   border-radius: 100px;
   border: 2px solid black;
@@ -114,7 +137,20 @@
   margin-left: 5px;
 }
 
-/* Schritte Styling */
+
+
+/* SCHRITTE */
+
+/* Schritte ganzes Feld */
+.stepsStyling{
+  text-align: center;
+  background-color: #f2f1f0;
+  border-radius: 16px;
+  height: auto;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+/* Schritte Überschrift */
 .stepsStyling h3 {
   color: black;
   text-align: center;
@@ -123,17 +159,22 @@
   font-weight: 300;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+  margin-top: 0px;
 }
+/* Schritte einzeln */
 .stepsStyling h5 {
   color: rgb(255, 255, 255);
   text-align: center;
   font-family: montserrat;
   font-size: 13px;
   font-weight: 400;
+  margin: 0px;
 }
+
 .stepsStyling .stepsListStyling {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   overflow-wrap: break-word;
 }
@@ -143,12 +184,13 @@
   border-radius: 10px;
   width: fit-content;
   height: fit-content;
-  padding-top: 2px;
+  /* padding-top: 2px;
   padding-left: 7px;
-  padding-right: 7px;
+  padding-right: 7px; */
+  padding: 10px;
   height: 20px;
-  margin-bottom: 3px;
-  max-width: 300px;
+  margin: none;
+  max-width: 260px;
   height: auto;
 }
 
@@ -159,7 +201,7 @@
   font-size: 13px;
   font-weight: 400;
 
-  width: 85%;
+  width: 220px;
   height: 30px;
   border-radius: 100px;
   border: 2px solid black;
@@ -193,6 +235,15 @@
   border: none;
 
   margin-left: 5px;
+}
+
+.flexStyling{
+  text-align: center;
+  background-color: #f2f1f0;
+  border-radius: 16px;
+  height: auto;
+  padding-bottom: 5px;
+  padding-top: 10px;
 }
 
 .categoryStyling option {
