@@ -29,7 +29,7 @@
 /* Container des Popups */
 .infoBox {
   animation: popupAnimationUp 0.3s;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in;
 
   position: fixed;
   background: rgb(21, 21, 21);
