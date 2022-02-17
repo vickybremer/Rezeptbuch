@@ -2,15 +2,6 @@
 * {
   -webkit-tap-highlight-color: transparent;
 }
-/* Text der Buttons kann auf mobiler Version nicht makiert werden */
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
 
 .navButtons {
   text-align: center;
