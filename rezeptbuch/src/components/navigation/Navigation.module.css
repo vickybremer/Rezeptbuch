@@ -1,3 +1,4 @@
+/* Buttons haben keine Highlight-Farbe beim Klicken */
 * {
   -webkit-tap-highlight-color: transparent;
 }

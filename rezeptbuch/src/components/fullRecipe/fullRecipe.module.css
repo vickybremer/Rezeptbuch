@@ -1,7 +1,10 @@
 * {
   -webkit-tap-highlight-color: transparent;
-} /* Komplette Seite, wenn sich Popup öffnet */
+}
+
+/* Komplette Seite, wenn sich Popup öffnet */
 .fullRecipeContainer {
+  animation: backgroundAnimation 0.3s;
   display: flex;
   justify-content: center;
   background-color: rgba(21, 21, 21, 0.801);
@@ -13,9 +16,21 @@
   left: 0;
   z-index: 999;
 }
+/* Transparenter Hintergrund Animation */
+@keyframes backgroundAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /* Container des Popups */
 .infoBox {
+  animation: popupAnimationUp 0.3s;
+  transition-timing-function: ease-in;
+
   position: fixed;
   background: rgb(21, 21, 21);
   overflow-y: scroll;
@@ -27,6 +42,15 @@
   height: 90%;
   margin-bottom: 0px;
   bottom: 0px;
+}
+/* Animation */
+@keyframes popupAnimationUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
 }
 /* Styling aller Textelemente im Popup */
 .fullRecipeTextStyling {

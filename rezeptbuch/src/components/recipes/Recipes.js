@@ -48,7 +48,6 @@ export default function Recipes() {
       iconSource = icons[9].src;
     }
 
-    console.log(iconSource);
     return iconSource;
   }
 
