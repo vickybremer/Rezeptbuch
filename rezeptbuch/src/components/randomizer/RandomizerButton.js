@@ -21,6 +21,11 @@ export default function RandomizerButton() {
     localData = JSON.parse(localStorage.getItem("recipes"));
     handleRandomize = (
       <div className={styles.randomizerContainer}>
+        <p>
+          Sometimes it’s hard to pick <br />A meal. We totally get that. <br />
+          <br />
+          That’s why we’re here! ;)
+        </p>{" "}
         <motion.button
           whileTap={{ scale: 0.9 }}
           className={styles.shuffleButton}
@@ -28,11 +33,6 @@ export default function RandomizerButton() {
         >
           Pick a meal
         </motion.button>
-        <p>
-          Sometimes it’s hard to pick A meal. We totally get that. <br />
-          <br />
-          That’s why we’re here! ;)
-        </p>
         <img src="logo.png"></img>
       </div>
     );

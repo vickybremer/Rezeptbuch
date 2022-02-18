@@ -16,9 +16,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 35%;
+  margin-top: 30%;
   margin-left: 20px;
   margin-right: 20px;
+}
+.randomizerContainer p {
+  align-self: center;
+  width: 85%;
+  text-align: center;
+  font-family: oswald;
+  color: rgb(56, 56, 56);
+  font-size: 17px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .shuffleButton {
   align-self: center;
@@ -31,21 +41,12 @@
   height: 40px;
   border-radius: 100px;
   border: none;
+  margin-top: 20px;
 }
-.randomizerContainer p {
-  align-self: center;
-  width: 85%;
-  margin-top: 40px;
-  text-align: left;
-  font-family: oswald;
-  color: rgb(56, 56, 56);
-  font-size: 17px;
-  font-weight: 400;
-  text-transform: uppercase;
-}
+
 .randomizerContainer img {
   width: 130px;
-  margin-top: 30px;
+  margin-top: 40px;
   align-self: center;
 }
 
